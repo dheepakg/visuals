@@ -1,4 +1,4 @@
-gross_income = 2092000
+gross_income = 1092000
 slab_rate_pcnt = (0, 5, 10, 15, 20, 25, 30)
 val_list = [
     0,
