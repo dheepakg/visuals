@@ -7,3 +7,8 @@ result.[csv/json/yaml] file -> This one holds the extracted data.
 1. Gross Income (INR)
 2. Tax rate (Percentage)
 3. Tax amount (INR)
+
+*File Names*  
+ * _chart.r_ - Contains R code to generate Chart  
+ * _income-tax-rate.png_ - Generated chart
+ 
