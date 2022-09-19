@@ -1,19 +1,19 @@
 getwd()
-setwd("./")
+setwd("/Users/deegee/Desktop/WorkArea/GitHub/DataViz/taxation-rate")
 options(scipen=999) # turn off scientific notation like 1e+06
 
 taxation_data <- read.csv("result.csv")
 colnames(taxation_data) <- c('income','taxRate','taxAmount') #Adding headers
 
 # Importing libraries
-install.packages('remotes')
+# install.packages('remotes')
 remotes::install_github("clauswilke/ggtext")
 library(ggplot2)
 library(ggtext)
 
 
 # Color definitions
-colorSepia <- "#eadbcb"
+colorSepia <- "#fff1e5"
 
 # Adding bar plot to dual chart - WIP
 ggplot(data = taxation_data, aes(x=income/100000, y=income/100000)) +
@@ -47,4 +47,4 @@ ggplot(data = taxation_data, aes(x=income/100000, y=income/100000)) +
     plot.caption = element_markdown()
   ) 
 
-ggsave(filename = "income-tax-rate.webp", width = 22, height = 33, )
+ggsave(filename = "income-tax-rate.png", )
