@@ -8,9 +8,9 @@
 {"node":4,"name":"saving"}
 ],
 "links":[
-{"source":0,"target":5,"value":100},
-{"source":1,"target":5,"value":5.5},
-{"source":5,"targte":2,"value":59},
-{"source":5,"targte":3,"value":21},
-{"source":5,"targte":4,"value":7}
+{"source":0,"target":5,"value":2},
+{"source":1,"target":5,"value":3},
+{"source":5,"targte":2,"value":4},
+{"source":5,"targte":3,"value":1},
+{"source":5,"targte":4,"value":3}
 ]}
