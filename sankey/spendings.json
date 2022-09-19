@@ -9,6 +9,6 @@
 {"node":6,"name":"Balance at EOM"}
 ],
 "links":[
-{"source":0, "target": 2, "value":100},
-{"source":1, "target": 2, "value":5.5}
+{"source":0, "target": 2, "value":10},
+{"source":1, "target": 2, "value":.55}
 ]}
