@@ -1,0 +1,14 @@
+{
+"nodes":[
+{"node":0,"name":"From Prev Month"},
+{"node":1,"name":"Salary"},
+{"node":2,"name":"Available at start of month"},
+{"node":3,"name":"Spendings"},
+{"node":4,"name":"Investment"},
+{"node":5,"name":"Savings"},
+{"node":6,"name":"Balance at EOM"}
+],
+"links":[
+{"source":0, "target": 2, "value":100},
+{"source":1, "target": 2, "value":5.5}
+]}
