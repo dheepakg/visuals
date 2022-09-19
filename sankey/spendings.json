@@ -2,7 +2,7 @@
 "nodes":[
 {"node":0,"name":"node0"},
 {"node":1,"name":"node1"},
-{"node":5,"name":"node1a"},
+{"node":5,"name":"income"},
 {"node":2,"name":"node2"},
 {"node":3,"name":"node3"},
 {"node":4,"name":"node4"}
