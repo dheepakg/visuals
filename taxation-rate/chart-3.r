@@ -5,6 +5,7 @@ options(scipen=999) # turn off scientific notation like 1e+06
 taxation_data <- read.csv("result.csv")
 colnames(taxation_data) <- c('income','taxRate','taxAmount') #Adding headers
 
+
 # Importing libraries
 # install.packages('remotes')
 # install.packages("plotly")
@@ -65,8 +66,8 @@ p <- ggplot(data = taxation_data,
   ) 
 
 ch <- ggplotly(,tooltip = c( "text")) %>% 
-  layout(hovermode = "x",height = "400",
-         width="600") 
+  layout(hovermode = "x",height = "600",
+         width="900") 
 
 
 
@@ -75,9 +76,11 @@ library(htmlwidgets)
 
 # https://github.com/plotly/plotly.py/issues/3337
 
-saveWidget(ch, 
-           file="chart_full_h400_w600.json",
-           selfcontained = TRUE)
-?saveWidget
+ch
+
+# saveWidget(ch, 
+#            file="chart_full_h600_w900.html",
+#            selfcontained = TRUE)
+# ?saveWidget
 
 
