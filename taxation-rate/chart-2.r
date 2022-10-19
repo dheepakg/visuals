@@ -7,15 +7,17 @@ colnames(taxation_data) <- c('income','taxRate','taxAmount') #Adding headers
 
 # Importing libraries
 # install.packages('remotes')
-remotes::install_github("clauswilke/ggtext")
+# install.packages("plotly")
+
+# remotes::install_github("clauswilke/ggtext")
 library(ggplot2)
 library(ggtext)
+library(plotly)
 
 
 # Color definitions
 colorSepia <- "#fff1e5"
 
-# Adding bar plot to dual chart - WIP
 ggplot(data = taxation_data, aes(x=income/100000, y=income/100000)) +
   geom_line(aes(y=income/100000), colour = "DarkBlue") +
   geom_line(aes(y=taxRate), colour= "Brown") +
@@ -47,4 +49,6 @@ ggplot(data = taxation_data, aes(x=income/100000, y=income/100000)) +
     plot.caption = element_markdown()
   ) 
 
-ggsave(filename = "income-tax-rate.png", )
+# ggplotly(p)
+
+?ggplotly
