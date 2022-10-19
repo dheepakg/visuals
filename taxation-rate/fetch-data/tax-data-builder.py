@@ -34,7 +34,7 @@ def tax_rate_calculator(GROSS_INCOME, SLAB_RATE_PERCENT=(0, 5, 10, 15, 20, 25, 3
     return [GROSS_INCOME, str(tax_rate), int(tax) ]
 
 
-with open("result.csv", "w", newline="") as csv_file:
+with open("taxation-rate.csv", "w", newline="") as csv_file:
     writer = csv.writer(csv_file)
     for i in range(250_000, 3_000_001, 25_000):
         writer.writerow(tax_rate_calculator(i))

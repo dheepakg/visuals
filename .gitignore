@@ -99,8 +99,7 @@ celerybeat-schedule
 celerybeat.pid
 
 
-# R langiage
-.Rhistory
+
 
 
 # SageMath parsed files
@@ -133,3 +132,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .Rproj.user
+
+
+# R langiage
+.Rhistory
+.RData
