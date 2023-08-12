@@ -1,20 +1,32 @@
-// Build a pie with constant angle
+// To fetch current time
 
+var current_time = new Date();
+var formatted_time = current_time.toLocaleTimeString();
+
+var current_secs = current_time.getSeconds();
+
+console.log("Currect Second is ", current_time.getSeconds());
+
+// Build a pie with constant angle
+var number_of_arc = current_secs;
 //Width and height
-var data = Array(60).fill(1);
+var data = Array(12).fill(1);
 
 console.log(data);
 
+// Color Scale
+
+var myColor = d3.scaleLinear().domain([1, 12]).range(["white", "blue"]);
+
 var width = 1000;
-var height = 1000;
-var outerRadius = width / 2;
-var innerRadius = width / 2.2;
+var outerRadius = width / 3;
+var innerRadius = width / 4;
 //Create SVG element
 var svg = d3
   .select("body")
   .append("svg")
   .attr("width", width)
-  .attr("height", height);
+  .attr("height", width);
 
 // pie layout function
 var pie = d3.pie();
@@ -33,7 +45,16 @@ arcs.append("path").attr("d", arc);
 
 // Fill color
 
-arcs.append("path").attr("d", arc).attr("fill", "grey");
+arcs
+  .append("path")
+  .attr("d", arc)
+  .attr("fill", "blue")
+  .transition()
+  .duration(3000)
+  .attr("fill", "silver");
+// .attr("fill", function (d, i) {
+//   return myColor(2);
+// });
 
 // Fill values
 
