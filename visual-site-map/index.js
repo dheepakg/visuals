@@ -1,8 +1,8 @@
 const svg = d3
   .select(".canvas")
   .append("svg")
-  .attr("width", 900)
-  .attr("height", 600);
+  .attr("width", 1000)
+  .attr("height", 800);
 
 const LINE_ORIGIN = 70;
 const TEXT_ORIGIN = 20;
@@ -13,7 +13,7 @@ graph
   .append("rect")
   .attr("x", 0)
   .attr("y", 0)
-  .attr("width", 900)
+  .attr("width", 1000)
   .attr("height", 500)
   .attr("fill", "#fff1e5")
   .attr("stroke", "black")
@@ -45,7 +45,17 @@ function yearCompleted(input_year) {
     return 365;
   }
 }
+
+var uniq_cat;
 d3.json("details.json").then((data) => {
+  // Listing categories
+  var cat_list = [];
+  for (i = 0; i < data.length; i++) {
+    cat_list.push(data[i].category);
+  }
+  // Unique Categories
+  uniq_cat = [...new Set(cat_list)].sort();
+
   // Sclaing
   // Defines the year line
   const yScale = d3
@@ -62,6 +72,7 @@ d3.json("details.json").then((data) => {
   const texts = lines.select("text").data(data);
   const today_text = lines.select("text").data(data);
   const circles = lines.select("circle").data(data);
+  const categories = graph.selectAll("text").data(uniq_cat);
 
   texts
     .enter()
@@ -72,10 +83,6 @@ d3.json("details.json").then((data) => {
     .attr("font-size", 18)
     .attr("font-weight", "Bold");
 
-  // console.log(
-  //   xScale(dayOfTheYear("2023-05-22")),
-  //   xScale(yearCompleted(currentYear()))
-  // );
   today_text
     .enter()
     .append("text")
@@ -86,6 +93,7 @@ d3.json("details.json").then((data) => {
     .attr("y", yScale(currentYear()) - 10)
     .attr("text-anchor", "middle")
     .attr("font-family", "monospace")
+    // .attr("transform", `rotate(30)`)
     .attr("font-size", 10);
 
   // Below texts are for right side text showing count of posts per year
@@ -127,7 +135,9 @@ d3.json("details.json").then((data) => {
     .attr("r", 3)
     .attr("cx", (d) => xScale(dayOfTheYear(d.pub_on)))
     .attr("cy", (d) => yScale(d.year))
-    .attr("fill", "#0000EE")
+    .attr("fill", "white")
+    .attr("stroke", "black")
+    .attr("class", (d) => "cat_" + d.category)
     .on("mouseover", function (event, d) {
       d3.select(this).attr("r", 6).attr("fill", "green");
 
@@ -146,10 +156,9 @@ d3.json("details.json").then((data) => {
     })
 
     .on("mouseout", function (d) {
-      d3.select(this).attr("r", 3).attr("fill", "#0000EE");
+      d3.select(this).attr("r", 3).attr("fill", "white");
       tip.style("opacity", 0);
     });
-
   // Tooltip
 
   var tip = d3
@@ -157,4 +166,40 @@ d3.json("details.json").then((data) => {
     .append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
+
+  // Chart separator
+  lines
+    .enter()
+    .append("line")
+    .attr("x1", 760)
+    .attr("y1", (d) => yScale(2023) - 20)
+    .attr("x2", 760)
+    .attr("y2", (d) => yScale(2017) + 20)
+    .attr("stroke", "silver")
+    .attr("stroke-width", 2);
+
+  // Categories heading
+  texts
+    .enter()
+    .append("text")
+    .text("Category")
+    .attr("x", 850)
+    .attr("y", (d) => yScale(2023) - 30)
+    .attr("text-anchor", "middle")
+    .attr("font-family", "monospace")
+    .attr("font-size", 22);
+
+  // Categories values
+
+  for (i = 0; i < uniq_cat.length; i++) {
+    categories
+      .enter()
+      .append("text")
+      .text(uniq_cat[i])
+      .attr("x", 780)
+      .attr("y", (d) => yScale(2023) + i * 30)
+      .attr("font-family", "monospace")
+      .attr("class", (d) => "cat_" + uniq_cat[i])
+      .attr("font-size", 15);
+  }
 });
