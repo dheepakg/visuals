@@ -85,13 +85,13 @@
     ]
   },
   {
-
+      "year": 2022,
     "posts":[
       {
         "pub_on": "2022-10-13",
         "title": "Migrated to blogdown",
         "url": "https://dheepakg.github.io/post/2022/10/migrated-to-blogdown/",
-        "category": "backend"
+        "category": "Backend"
       },
       {
         "pub_on": "2022-08-22",
@@ -372,7 +372,7 @@
         "pub_on": "2019-04-25",
         "title": "Welcome to the site!",
         "url": "https://dheepakg.github.io/post/2019/04/welcome-to-the-site/",
-        "category": "init"
+        "category": "Init"
       }
     ]
   },
