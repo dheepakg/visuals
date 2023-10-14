@@ -293,7 +293,7 @@
         "result": "",
         "tour_match_num": 13,
         "at":"Delhi",
-        "url": ""
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/afghanistan-vs-england-13th-match-1384404/live-cricket-score"
       },
       {
         "team_match_num": "4",
@@ -302,7 +302,7 @@
         "result": "",
         "tour_match_num": 20,
         "at":"Wankhede",
-        "url": ""
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-south-africa-20th-match-1384411/live-cricket-score"
       },
       {
         "team_match_num": "5",
@@ -311,7 +311,7 @@
         "result": "",
         "tour_match_num": 25,
         "at":"Bangalore",
-        "url": ""
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-sri-lanka-25th-match-1384416/live-cricket-score"
       },
       {
         "team_match_num": "6",
@@ -320,7 +320,7 @@
         "result": "",
         "tour_match_num": 29,
         "at":"Lucknow",
-        "url": ""
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-england-29th-match-1384420/live-cricket-score"
       },
       {
         "team_match_num": "7",
@@ -329,7 +329,7 @@
         "result": "",
         "tour_match_num": 36,
         "at":"Ahmedabad",
-        "url": ""
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-england-36th-match-1384427/live-cricket-score"
       },
       {
         "team_match_num": "8",
@@ -338,7 +338,7 @@
         "result": "",
         "tour_match_num": 40,
         "at":"Pune",
-        "url": ""
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-netherlands-40th-match-1384431/live-cricket-score"
       },
       {
         "team_match_num": "9",
@@ -347,7 +347,7 @@
         "result": "",
         "tour_match_num": 44,
         "at":"Eden Gardens",
-        "url": ""
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-pakistan-44th-match-1384435/live-cricket-score"
       }
     ]
   },
@@ -464,66 +464,66 @@
       },
       {
         "team_match_num": "3",
-        "against":"",
-        "held_on":"",
+        "against":"S A",
+        "held_on":"2023-10-17",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 15,
+        "at":"Dharamsala",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/netherlands-vs-south-africa-15th-match-1384406/live-cricket-score"
       },
       {
         "team_match_num": "4",
-        "against":"",
-        "held_on":"",
+        "against":"S L",
+        "held_on":"2023-10-21",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 19,
+        "at":"Lucknow",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/netherlands-vs-sri-lanka-19th-match-1384410/live-cricket-score"
       },
       {
         "team_match_num": "5",
-        "against":"",
-        "held_on":"",
+        "against":"AUS",
+        "held_on":"2023-10-25",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 24,
+        "at":"Delhi",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-netherlands-24th-match-1384415/live-cricket-score"
       },
       {
         "team_match_num": "6",
-        "against":"",
-        "held_on":"",
+        "against":"BAN",
+        "held_on":"2023-10-28",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 28,
+        "at":"Eden Gardens",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/bangladesh-vs-netherlands-28th-match-1384419/live-cricket-score"
       },
       {
         "team_match_num": "7",
-        "against":"",
-        "held_on":"",
+        "against":"AFG",
+        "held_on":"2023-11-03",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 34,
+        "at":"Lucknow",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/afghanistan-vs-netherlands-34th-match-1384425/live-cricket-score"
       },
       {
         "team_match_num": "8",
-        "against":"",
-        "held_on":"",
+        "against":"ENG",
+        "held_on":"2023-11-08",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 40,
+        "at":"Pune",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-netherlands-40th-match-1384431/live-cricket-score"
       },
       {
         "team_match_num": "9",
-        "against":"",
-        "held_on":"",
+        "against":"IND",
+        "held_on":"2023-11-12",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 45,
+        "at":"Bangalore",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-netherlands-45th-match-1384436/live-cricket-score"
       }
     ]
   },
@@ -561,57 +561,57 @@
       },
       {
         "team_match_num": "4",
-        "against":"",
-        "held_on":"",
+        "against":"AFG",
+        "held_on":"2023-10-18",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 16,
+        "at":"Chennai",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/new-zealand-vs-afghanistan-16th-match-1384407/live-cricket-score"
       },
       {
         "team_match_num": "5",
-        "against":"",
-        "held_on":"",
+        "against":"IND",
+        "held_on":"2023-10-22",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 21,
+        "at":"Dharamsala",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-new-zealand-21st-match-1384412/live-cricket-score"
       },
       {
         "team_match_num": "6",
-        "against":"",
-        "held_on":"",
+        "against":"AUS",
+        "held_on":"2023-10-28",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 27,
+        "at":"Dharamsala",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-new-zealand-27th-match-1384418/live-cricket-score"
       },
       {
         "team_match_num": "7",
-        "against":"",
-        "held_on":"",
+        "against":"S A",
+        "held_on":"2023-11-01",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 32,
+        "at":"Pune",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/new-zealand-vs-south-africa-32nd-match-1384423/live-cricket-score"
       },
       {
         "team_match_num": "8",
-        "against":"",
-        "held_on":"",
+        "against":"S A",
+        "held_on":"2023-11-04",
         "result": "",
         "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "at":"Bangalore",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/new-zealand-vs-south-africa-32nd-match-1384423/live-cricket-score"
       },
       {
         "team_match_num": "9",
-        "against":"",
-        "held_on":"",
+        "against":"S L",
+        "held_on":"2023-11-09",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 41,
+        "at":"Bangalore",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/new-zealand-vs-sri-lanka-41st-match-1384432/live-cricket-score"
       }
     ]
   },
@@ -649,57 +649,57 @@
       },
       {
         "team_match_num": "4",
-        "against":"",
-        "held_on":"",
+        "against":"AUS",
+        "held_on":"2023-10-20",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 18,
+        "at":"Bangalore",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-pakistan-18th-match-1384409/live-cricket-score"
       },
       {
         "team_match_num": "5",
-        "against":"",
-        "held_on":"",
+        "against":"AFG",
+        "held_on":"2023-10-23",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 22,
+        "at":"Chennai",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/afghanistan-vs-pakistan-22nd-match-1384413/live-cricket-score"
       },
       {
         "team_match_num": "6",
-        "against":"",
-        "held_on":"",
+        "against":"S A",
+        "held_on":"2023-10-27",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 26,
+        "at":"Chennai",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/pakistan-vs-south-africa-26th-match-1384417/live-cricket-score"
       },
       {
         "team_match_num": "7",
-        "against":"",
-        "held_on":"",
+        "against":"BAN",
+        "held_on":"2023-10-31",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 31,
+        "at":"Eden Gardens",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/bangladesh-vs-pakistan-31st-match-1384422/live-cricket-score"
       },
       {
         "team_match_num": "8",
-        "against":"",
-        "held_on":"",
+        "against":"N Z",
+        "held_on":"2023-11-04",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 35,
+        "at":"Bangalore",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/new-zealand-vs-pakistan-35th-match-1384426/live-cricket-score"
       },
       {
         "team_match_num": "9",
-        "against":"",
-        "held_on":"",
+        "against":"ENG",
+        "held_on":"2023-10-11",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 44,
+        "at":"Eden Gardens",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-pakistan-44th-match-1384435/live-cricket-score"
       }
     ]
   },
@@ -728,66 +728,66 @@
       },
       {
         "team_match_num": "3",
-        "against":"",
-        "held_on":"",
+        "against":"NED",
+        "held_on":"2023-10-17",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 15,
+        "at":"Dharamsala",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/netherlands-vs-south-africa-15th-match-1384406/live-cricket-score"
       },
       {
         "team_match_num": "4",
-        "against":"",
-        "held_on":"",
+        "against":"ENG",
+        "held_on":"2023-10-21",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 20,
+        "at":"Wankhede",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-south-africa-20th-match-1384411/live-cricket-score"
       },
       {
         "team_match_num": "5",
-        "against":"",
-        "held_on":"",
+        "against":"BAN",
+        "held_on":"2023-10-24",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 23,
+        "at":"Wankhede",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/bangladesh-vs-south-africa-23rd-match-1384414/live-cricket-score"
       },
       {
         "team_match_num": "6",
-        "against":"",
-        "held_on":"",
+        "against":"PAK",
+        "held_on":"2023-10-27",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 26 ,
+        "at":"Chennai",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/pakistan-vs-south-africa-26th-match-1384417/live-cricket-score"
       },
       {
         "team_match_num": "7",
-        "against":"",
-        "held_on":"",
+        "against":"N Z",
+        "held_on":"2023-11-01",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 32,
+        "at":"Pune",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/new-zealand-vs-south-africa-32nd-match-1384423/live-cricket-score"
       },
       {
         "team_match_num": "8",
-        "against":"",
-        "held_on":"",
+        "against":"IND",
+        "held_on":"2023-11-05",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 37,
+        "at":"Eden Gardens",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-south-africa-37th-match-1384428/live-cricket-score"
       },
       {
         "team_match_num": "9",
-        "against":"",
-        "held_on":"",
+        "against":"AFG",
+        "held_on":"2023-11-10",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 42,
+        "at":"Ahmedabad",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/afghanistan-vs-south-africa-42nd-match-1384433/live-cricket-score"
       }
     ]
   },
@@ -816,66 +816,66 @@
       },
       {
         "team_match_num": "3",
-        "against":"",
-        "held_on":"",
+        "against":"AUS",
+        "held_on":"2023-10-16",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 14,
+        "at":"Lucknow",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-sri-lanka-14th-match-1384405/live-cricket-score"
       },
       {
         "team_match_num": "4",
-        "against":"",
-        "held_on":"",
+        "against":"NED",
+        "held_on":"2023-10-21",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 19,
+        "at":"Lucknow",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/netherlands-vs-sri-lanka-19th-match-1384410/live-cricket-score"
       },
       {
         "team_match_num": "5",
-        "against":"",
-        "held_on":"",
+        "against":"ENG",
+        "held_on":"2023-10-26",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 25,
+        "at":"Bangalore",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-sri-lanka-25th-match-1384416/live-cricket-score"
       },
       {
         "team_match_num": "6",
-        "against":"",
-        "held_on":"",
+        "against":"AFG",
+        "held_on":"2023-10-30",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 30,
+        "at":"Pune",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/afghanistan-vs-sri-lanka-30th-match-1384421/live-cricket-score"
       },
       {
         "team_match_num": "7",
-        "against":"",
-        "held_on":"",
+        "against":"IND",
+        "held_on":"2023-11-02",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 33,
+        "at":"Wankhede",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-sri-lanka-33rd-match-1384424/live-cricket-score"
       },
       {
         "team_match_num": "8",
-        "against":"",
-        "held_on":"",
+        "against":"BAN",
+        "held_on":"2023-11-06",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 38,
+        "at":"Delhi",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/bangladesh-vs-sri-lanka-38th-match-1384429/live-cricket-score"
       },
       {
         "team_match_num": "9",
-        "against":"",
-        "held_on":"",
+        "against":"N Z",
+        "held_on":"2023-11-09",
         "result": "",
-        "tour_match_num": 0,
-        "at":"",
-        "url": ""
+        "tour_match_num": 41,
+        "at":"Bangalore",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/new-zealand-vs-sri-lanka-41st-match-1384432/live-cricket-score"
       }
     ]
   }
