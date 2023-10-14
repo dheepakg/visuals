@@ -2,60 +2,87 @@
   {
     "team": "Afghanistan",
     "short_name": "AFG",
-    "jersey": "",
+    "jersey": "#0169ad",
     "matches": [
       {
         "team_match_num": "1",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"BAN",
+        "held_on":"2023-10-07",
+        "result": "lost",
+        "tour_match_num": 3,
+        "at":"Dharmasala",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/afghanistan-vs-bangladesh-3rd-match-1384394/full-scorecard"
       },
       {
         "team_match_num": "2",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"IND",
+        "held_on":"2023-10-11",
+        "result": "lost",
+        "tour_match_num": 9,
+        "at":"Delhi",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-afghanistan-9th-match-1384400/full-scorecard"
       },
       {
         "team_match_num": "3",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "4",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "5",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "6",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "7",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "8",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "9",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       }
     ]
@@ -63,60 +90,87 @@
   {
     "team": "Australia",
     "short_name": "AUS",
-    "jersey": "",
+    "jersey": "#d9bc55",
     "matches": [
       {
         "team_match_num": "1",
+        "against":"IND",
+        "held_on":"2023-10-08",
         "result": "lost",
-        "tour_match_num": 0,
-        "url": ""
+        "tour_match_num": 5,
+        "at":"Chennai",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-australia-5th-match-1384396/full-scorecard"
       },
       {
         "team_match_num": "2",
+        "against":"S A",
+        "held_on":"2023-10-12",
         "result": "lost",
-        "tour_match_num": 0,
-        "url": ""
+        "tour_match_num": 10,
+        "at":"Lucknow",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-south-africa-10th-match-1384401/full-scorecard"
       },
       {
         "team_match_num": "3",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "4",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "5",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "6",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "7",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "8",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "9",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       }
     ]
@@ -124,60 +178,87 @@
   {
     "team": "Bangladesh",
     "short_name": "BAN",
-    "jersey": "",
+    "jersey": "#29380e",
     "matches": [
       {
         "team_match_num": "1",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"AFG",
+        "held_on":"2023-10-07",
+        "result": "won",
+        "tour_match_num": 3,
+        "at":"Dharmasala",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/afghanistan-vs-bangladesh-3rd-match-1384394/full-scorecard"
       },
       {
         "team_match_num": "2",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"ENG",
+        "held_on":"2023-10-10",
+        "result": "lost",
+        "tour_match_num": 7,
+        "at":"Dharamsala",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/bangladesh-vs-england-7th-match-1384398/full-scorecard"
       },
       {
         "team_match_num": "3",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"N Z",
+        "held_on":"2023-10-11",
+        "result": "lost",
+        "tour_match_num": 11,
+        "at":"Chennai",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/bangladesh-vs-new-zealand-11th-match-1384402/full-scorecard"
       },
       {
         "team_match_num": "4",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "5",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "6",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "7",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "8",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "9",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       }
     ]
@@ -185,60 +266,87 @@
   {
     "team": "England",
     "short_name": "ENG",
-    "jersey": "",
+    "jersey": "#0d408c",
     "matches": [
       {
         "team_match_num": "1",
+        "against":"N Z",
+        "held_on":"2023-10-05",
         "result": "lost",
         "tour_match_num": 1,
-        "url": "england-vs-new-zealand-1st-match-1384392/full-scorecard"
+        "at": "Ahmedabad",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-new-zealand-1st-match-1384392/full-scorecard"
       },
       {
         "team_match_num": "2",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"BAN",
+        "held_on":"2023-10-10",
+        "result": "won",
+        "tour_match_num": 7,
+        "at":"Dharamsala",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/bangladesh-vs-england-7th-match-1384398/full-scorecard"
       },
       {
         "team_match_num": "3",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "4",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "5",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "6",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "7",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "8",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "9",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       }
     ]
@@ -246,60 +354,87 @@
   {
     "team": "India",
     "short_name": "IND",
-    "jersey": "",
+    "jersey": "#045b90",
     "matches": [
       {
         "team_match_num": "1",
+        "against":"AUS",
+        "held_on":"2023-10-08",
         "result": "won",
-        "tour_match_num": 0,
-        "url": ""
+        "tour_match_num": 5,
+        "at":"Chennai",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-australia-5th-match-1384396/full-scorecard"
       },
       {
         "team_match_num": "2",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"AFG",
+        "held_on":"2023-10-11",
+        "result": "won",
+        "tour_match_num": 9,
+        "at":"Delhi",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-afghanistan-9th-match-1384400/full-scorecard"
       },
       {
         "team_match_num": "3",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"PAK",
+        "held_on":"2023-10-14",
+        "result": "won",
+        "tour_match_num": 12,
+        "at":"Ahmedabad",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-pakistan-12th-match-1384403/live-cricket-score"
       },
       {
         "team_match_num": "4",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "5",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "6",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "7",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "8",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "9",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       }
     ]
@@ -307,121 +442,175 @@
   {
     "team": "Netherlands",
     "short_name": "NET",
-    "jersey": "",
+    "jersey": "#fc5021",
     "matches": [
       {
         "team_match_num": "1",
+        "against":"Pak",
+        "held_on":"2023-10-06",
         "result": "lost",
         "tour_match_num": 2,
-        "url": "netherlands-vs-pakistan-2nd-match-1384393/full-scorecard"
+        "at":"Hyderabad",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/netherlands-vs-pakistan-2nd-match-1384393/full-scorecard"
       },
       {
         "team_match_num": "2",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"N Z",
+        "held_on":"2023-10-09",
+        "result": "lost",
+        "tour_match_num": 6,
+        "at":"Hyderabad",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/netherlands-vs-new-zealand-6th-match-1384397/full-scorecard"
       },
       {
         "team_match_num": "3",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "4",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "5",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "6",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "7",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "8",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "9",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       }
     ]
   },
   {
     "team": "New Zealand",
-    "short_name": "NZ",
-    "jersey": "",
+    "short_name": "N Z",
+    "jersey": "#232428",
     "matches": [
       {
         "team_match_num": "won",
+        "against":"ENG",
+        "held_on":"2023-10-05",
         "result": "won",
         "tour_match_num": 1,
-        "url": "england-vs-new-zealand-1st-match-1384392/full-scorecard"
+        "at": "Ahmedabad",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-new-zealand-1st-match-1384392/full-scorecard"
       },
       {
         "team_match_num": "2",
+        "against":"NET",
+        "held_on":"2023-10-09",
         "result": "won",
-        "tour_match_num": 0,
-        "url": ""
+        "tour_match_num": 6,
+        "at":"Hyderabad",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/netherlands-vs-new-zealand-6th-match-1384397/full-scorecard"
       },
       {
         "team_match_num": "3",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"BAN",
+        "held_on":"2023-10-11",
+        "result": "won",
+        "tour_match_num": 11,
+        "at":"Chennai",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/bangladesh-vs-new-zealand-11th-match-1384402/full-scorecard"
       },
       {
         "team_match_num": "4",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "5",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "6",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "7",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "8",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "9",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       }
     ]
@@ -429,182 +618,263 @@
   {
     "team": "Pakistan",
     "short_name": "PAK",
-    "jersey": "",
+    "jersey": "#294c3e",
     "matches": [
       {
         "team_match_num": "1",
+        "against":"",
+        "held_on":"2023-10-06",
         "result": "won",
         "tour_match_num": 2,
-        "url": "netherlands-vs-pakistan-2nd-match-1384393/full-scorecard"
+        "at":"Hyderabad",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/netherlands-vs-pakistan-2nd-match-1384393/full-scorecard"
       },
       {
         "team_match_num": "2",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"S L",
+        "held_on":"2023-10-10",
+        "result": "won",
+        "tour_match_num": 8,
+        "at":"Hyderabad",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/pakistan-vs-sri-lanka-8th-match-1384399/full-scorecard"
       },
       {
         "team_match_num": "3",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"IND",
+        "held_on":"2023-10-14",
+        "result": "lost",
+        "tour_match_num": 12,
+        "at":"Ahmedabad",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-pakistan-12th-match-1384403/live-cricket-score"
       },
       {
         "team_match_num": "4",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "5",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "6",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "7",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "8",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "9",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       }
     ]
   },
   {
     "team": "South Africa",
-    "short_name": "SAF",
-    "jersey": "",
+    "short_name": "S A",
+    "jersey": "#006548",
     "matches": [
       {
         "team_match_num": "1",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"S L",
+        "held_on":"2023-10-07",
+        "result": "won",
+        "tour_match_num": 4,
+        "at":"Delhi",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/south-africa-vs-sri-lanka-4th-match-1384395/full-scorecard"
       },
       {
         "team_match_num": "2",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"AUS",
+        "held_on":"2023-10-12",
+        "result": "won",
+        "tour_match_num": 10,
+        "at":"Lucknow",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-south-africa-10th-match-1384401/full-scorecard"
       },
       {
         "team_match_num": "3",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "4",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "5",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "6",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "7",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "8",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "9",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       }
     ]
   },
   {
     "team": "Sri Lanka",
-    "short_name": "SL",
-    "jersey": "",
+    "short_name": "S L",
+    "jersey": "#2680b3",
     "matches": [
       {
         "team_match_num": "1",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"S A",
+        "held_on":"2023-10-07",
+        "result": "lost",
+        "tour_match_num": 4,
+        "at":"Delhi",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/south-africa-vs-sri-lanka-4th-match-1384395/full-scorecard"
       },
       {
         "team_match_num": "2",
-        "result": "",
-        "tour_match_num": 0,
-        "url": ""
+        "against":"PAK",
+        "held_on":"2023-10-10",
+        "result": "lost",
+        "tour_match_num": 8,
+        "at":"Hyderabad",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/pakistan-vs-sri-lanka-8th-match-1384399/full-scorecard"
       },
       {
         "team_match_num": "3",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "4",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "5",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "6",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "7",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "8",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       },
       {
         "team_match_num": "9",
+        "against":"",
+        "held_on":"",
         "result": "",
         "tour_match_num": 0,
+        "at":"",
         "url": ""
       }
     ]
