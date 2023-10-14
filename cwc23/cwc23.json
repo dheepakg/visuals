@@ -1,0 +1,612 @@
+[
+  {
+    "team": "Afghanistan",
+    "short_name": "AFG",
+    "jersey": "",
+    "matches": [
+      {
+        "team_match_num": "1",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "2",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "3",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "4",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "5",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "6",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "7",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "8",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "9",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      }
+    ]
+  },
+  {
+    "team": "Australia",
+    "short_name": "AUS",
+    "jersey": "",
+    "matches": [
+      {
+        "team_match_num": "1",
+        "result": "lost",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "2",
+        "result": "lost",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "3",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "4",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "5",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "6",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "7",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "8",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "9",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      }
+    ]
+  },
+  {
+    "team": "Bangladesh",
+    "short_name": "BAN",
+    "jersey": "",
+    "matches": [
+      {
+        "team_match_num": "1",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "2",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "3",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "4",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "5",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "6",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "7",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "8",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "9",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      }
+    ]
+  },
+  {
+    "team": "England",
+    "short_name": "ENG",
+    "jersey": "",
+    "matches": [
+      {
+        "team_match_num": "1",
+        "result": "lost",
+        "tour_match_num": 1,
+        "url": "england-vs-new-zealand-1st-match-1384392/full-scorecard"
+      },
+      {
+        "team_match_num": "2",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "3",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "4",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "5",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "6",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "7",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "8",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "9",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      }
+    ]
+  },
+  {
+    "team": "India",
+    "short_name": "IND",
+    "jersey": "",
+    "matches": [
+      {
+        "team_match_num": "1",
+        "result": "won",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "2",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "3",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "4",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "5",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "6",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "7",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "8",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "9",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      }
+    ]
+  },
+  {
+    "team": "Netherlands",
+    "short_name": "NET",
+    "jersey": "",
+    "matches": [
+      {
+        "team_match_num": "1",
+        "result": "lost",
+        "tour_match_num": 2,
+        "url": "netherlands-vs-pakistan-2nd-match-1384393/full-scorecard"
+      },
+      {
+        "team_match_num": "2",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "3",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "4",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "5",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "6",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "7",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "8",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "9",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      }
+    ]
+  },
+  {
+    "team": "New Zealand",
+    "short_name": "NZ",
+    "jersey": "",
+    "matches": [
+      {
+        "team_match_num": "won",
+        "result": "won",
+        "tour_match_num": 1,
+        "url": "england-vs-new-zealand-1st-match-1384392/full-scorecard"
+      },
+      {
+        "team_match_num": "2",
+        "result": "won",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "3",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "4",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "5",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "6",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "7",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "8",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "9",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      }
+    ]
+  },
+  {
+    "team": "Pakistan",
+    "short_name": "PAK",
+    "jersey": "",
+    "matches": [
+      {
+        "team_match_num": "1",
+        "result": "won",
+        "tour_match_num": 2,
+        "url": "netherlands-vs-pakistan-2nd-match-1384393/full-scorecard"
+      },
+      {
+        "team_match_num": "2",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "3",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "4",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "5",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "6",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "7",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "8",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "9",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      }
+    ]
+  },
+  {
+    "team": "South Africa",
+    "short_name": "SAF",
+    "jersey": "",
+    "matches": [
+      {
+        "team_match_num": "1",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "2",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "3",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "4",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "5",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "6",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "7",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "8",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "9",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      }
+    ]
+  },
+  {
+    "team": "Sri Lanka",
+    "short_name": "SL",
+    "jersey": "",
+    "matches": [
+      {
+        "team_match_num": "1",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "2",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "3",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "4",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "5",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "6",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "7",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "8",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      },
+      {
+        "team_match_num": "9",
+        "result": "",
+        "tour_match_num": 0,
+        "url": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "team": "Afghanistan",
+    "short_name":"AFG",
+    "jersey": ""
+  },
+  {
+    "team": "Australia",
+    "short_name":"AUS",
+    "jersey": ""
+  },
+  {
+    "team": "Bangladesh",
+    "short_name":"BAN",
+    "jersey": ""
+  },
+  {
+    "team": "England",
+    "short_name":"ENG",
+    "jersey": ""
+  },
+  {
+    "team": "India",
+    "short_name":"IND",
+    "jersey": ""
+  },
+  {
+    "team": "Netherlands",
+    "short_name":"NET",
+    "jersey": ""
+  },
+  {
+    "team": "New Zealand",
+    "short_name":"NZ",
+    "jersey": ""
+  },
+  {
+    "team": "Pakistan",
+    "short_name":"PAK",
+    "jersey": ""
+  },
+  {
+    "team": "South Africa",
+    "short_name":"SAF",
+    "jersey": ""
+  },
+  {
+    "team": "Sri Lanka",
+    "short_name":"SL",
+    "jersey": ""
+  }
+]
