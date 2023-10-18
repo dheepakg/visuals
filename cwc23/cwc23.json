@@ -26,7 +26,7 @@
         "team_match_num": "3",
         "against":"ENG",
         "held_on":"2023-10-15",
-        "result": "",
+        "result": "won",
         "tour_match_num": 13,
         "at":"Delhi",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/afghanistan-vs-england-13th-match-1384404/live-cricket-score"
@@ -35,7 +35,7 @@
         "team_match_num": "4",
         "against":"N Z",
         "held_on":"2023-10-18",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 16,
         "at":"Chennai",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/new-zealand-vs-afghanistan-16th-match-1384407/live-cricket-score"
@@ -114,7 +114,7 @@
         "team_match_num": "3",
         "against":"S L",
         "held_on":"2023-10-16",
-        "result": "",
+        "result": "won",
         "tour_match_num": 14,
         "at":"Lucknow",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-sri-lanka-14th-match-1384405/live-cricket-score"
@@ -290,7 +290,7 @@
         "team_match_num": "3",
         "against":"AFG",
         "held_on":"2023-10-15",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 13,
         "at":"Delhi",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/afghanistan-vs-england-13th-match-1384404/live-cricket-score"
@@ -466,7 +466,7 @@
         "team_match_num": "3",
         "against":"S A",
         "held_on":"2023-10-17",
-        "result": "",
+        "result": "won",
         "tour_match_num": 15,
         "at":"Dharamsala",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/netherlands-vs-south-africa-15th-match-1384406/live-cricket-score"
@@ -563,7 +563,7 @@
         "team_match_num": "4",
         "against":"AFG",
         "held_on":"2023-10-18",
-        "result": "",
+        "result": "won",
         "tour_match_num": 16,
         "at":"Chennai",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/new-zealand-vs-afghanistan-16th-match-1384407/live-cricket-score"
@@ -730,7 +730,7 @@
         "team_match_num": "3",
         "against":"NED",
         "held_on":"2023-10-17",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 15,
         "at":"Dharamsala",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/netherlands-vs-south-africa-15th-match-1384406/live-cricket-score"
@@ -818,7 +818,7 @@
         "team_match_num": "3",
         "against":"AUS",
         "held_on":"2023-10-16",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 14,
         "at":"Lucknow",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-sri-lanka-14th-match-1384405/live-cricket-score"
