@@ -99,7 +99,7 @@ d3.json("cwc23.json").then((data) => {
       .enter()
       .append("text")
       .text(data[i].short_name)
-      .attr("x", xScale(i))
+      .attr("x", xScale(i) + 5 - 3)
       .attr("y", backGroundHeight - 40)
       .attr("fill", "black")
       .attr("font-size", 10);
