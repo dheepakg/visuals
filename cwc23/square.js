@@ -50,6 +50,7 @@ d3.json("cwc23.json").then((data) => {
   const endOfGroupStage = graph.selectAll("text").data(data);
   const matchResult = graph.selectAll("rect").data(data);
   const matchResultOval = graph.selectAll("ellipse").data(data);
+  const matchResultsquare = graph.selectAll("rect").data(data);
   const tablePosition = graph.selectAll("text").data(data);
 
   // Scale
@@ -111,16 +112,16 @@ d3.json("cwc23.json").then((data) => {
       const heldOn = data[i].matches[j].held_on;
       const url = data[i].matches[j].url;
 
-      matchResultOval
+      matchResultsquare
         .enter()
         .append("a")
         .attr("xlink:href", url)
         .attr("target", "_blank")
-        .append("ellipse")
-        .attr("cx", xScale(i) + 5)
-        .attr("cy", backGroundHeight - 65 - j * 27)
-        .attr("rx", 16)
-        .attr("ry", 12)
+        .append("rect")
+        .attr("x", xScale(i) + 5 - 3)
+        .attr("y", backGroundHeight - 70 - j * 20)
+        .attr("height", 20)
+        .attr("width", 20)
         // .attr("fill", resultColorPicker(data[i].matches[j].result))
         .attr(
           "fill",
@@ -131,14 +132,14 @@ d3.json("cwc23.json").then((data) => {
         .attr("stroke-width", 1)
         .attr("stroke", "cyan")
         .on("mouseover", function (event, d) {
-          d3.select(this).attr("rx", 18).attr("ry", 16);
+          d3.select(this).attr("height", 25).attr("width", 25);
           tip
             .style("opacity", 1)
             .style("left", event.pageX - 20 + "px")
             .style("top", event.pageY - 75 + "px");
         })
         .on("mouseout", function (d) {
-          d3.select(this).attr("rx", 16).attr("ry", 12);
+          d3.select(this).attr("height", 20).attr("width", 20);
           tip
             .style("opacity", 0)
             .html(
@@ -156,12 +157,13 @@ d3.json("cwc23.json").then((data) => {
             );
         });
     }
+
     tablePosition
       .enter()
       .append("text")
       .text(data[i].position)
       .attr("x", xScale(i) + 10)
-      .attr("y", backGroundHeight - 305)
+      .attr("y", backGroundHeight - 248)
       .attr("fill", tablePositionColor(data[i].position))
       .attr("font-weight", "bold")
       .attr("font-size", 10);
@@ -170,19 +172,19 @@ d3.json("cwc23.json").then((data) => {
   roundRobinMarker
     .enter()
     .append("line")
-    .attr("x1", 0 + 60)
-    .attr("y1", backGroundHeight - 320)
+    .attr("x1", 0 + 75)
+    .attr("y1", backGroundHeight - 260)
     .attr("x2", backGroundWidth - 50)
-    .attr("y2", backGroundHeight - 320)
+    .attr("y2", backGroundHeight - 260)
     .attr("stroke", "#add8e6")
     .attr("stroke-width", 1);
   roundRobinMarker
     .enter()
     .append("line")
-    .attr("x1", 0 + 60)
-    .attr("y1", backGroundHeight - 300)
+    .attr("x1", 0 + 75)
+    .attr("y1", backGroundHeight - 240)
     .attr("x2", backGroundWidth - 50)
-    .attr("y2", backGroundHeight - 300)
+    .attr("y2", backGroundHeight - 240)
     .attr("stroke", "#add8e6")
     .attr("stroke-width", 1);
 

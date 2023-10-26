@@ -3,6 +3,7 @@
     "team": "Afghanistan",
     "short_name": "AFG",
     "jersey": "#0169ad",
+    "position":7,
     "matches": [
       {
         "team_match_num": "1",
@@ -44,7 +45,7 @@
         "team_match_num": "5",
         "against":"PAK",
         "held_on":"2023-10-23",
-        "result": "",
+        "result": "won",
         "tour_match_num": 22,
         "at":"Chennai",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/afghanistan-vs-pakistan-22nd-match-1384413/live-cricket-score"
@@ -91,6 +92,7 @@
     "team": "Australia",
     "short_name": "AUS",
     "jersey": "#d9bc55",
+    "position":4,
     "matches": [
       {
         "team_match_num": "1",
@@ -123,7 +125,7 @@
         "team_match_num": "4",
         "against":"PAK",
         "held_on":"2023-10-20",
-        "result": "",
+        "result": "won",
         "tour_match_num": 18,
         "at":"Bangalore",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-pakistan-18th-match-1384409/live-cricket-score"
@@ -132,7 +134,7 @@
         "team_match_num": "5",
         "against":"NED",
         "held_on":"2023-10-25",
-        "result": "",
+        "result": "won",
         "tour_match_num": 24,
         "at":"Delhi",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-netherlands-24th-match-1384415/live-cricket-score"
@@ -179,6 +181,7 @@
     "team": "Bangladesh",
     "short_name": "BAN",
     "jersey": "#29380e",
+    "position":8,
     "matches": [
       {
         "team_match_num": "1",
@@ -211,7 +214,7 @@
         "team_match_num": "4",
         "against":"IND",
         "held_on":"2023-10-19",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 17,
         "at":"Pune",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-bangladesh-17th-match-1384408/live-cricket-score"
@@ -220,7 +223,7 @@
         "team_match_num": "5",
         "against":"S A",
         "held_on":"2023-10-24",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 23,
         "at":"Wankhede",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/bangladesh-vs-south-africa-23rd-match-1384414/live-cricket-score"
@@ -267,6 +270,7 @@
     "team": "England",
     "short_name": "ENG",
     "jersey": "#0d408c",
+    "position":9,
     "matches": [
       {
         "team_match_num": "1",
@@ -299,7 +303,7 @@
         "team_match_num": "4",
         "against":" S A",
         "held_on":"2023-10-21",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 20,
         "at":"Wankhede",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-south-africa-20th-match-1384411/live-cricket-score"
@@ -308,7 +312,7 @@
         "team_match_num": "5",
         "against":"S L",
         "held_on":"2023-10-26",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 25,
         "at":"Bangalore",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-sri-lanka-25th-match-1384416/live-cricket-score"
@@ -355,6 +359,7 @@
     "team": "India",
     "short_name": "IND",
     "jersey": "#045b90",
+    "position":1,
     "matches": [
       {
         "team_match_num": "1",
@@ -387,7 +392,7 @@
         "team_match_num": "4",
         "against":"BAN",
         "held_on":"2023-10-19",
-        "result": "",
+        "result": "won",
         "tour_match_num": 17,
         "at":"Pune",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-bangladesh-17th-match-1384408/live-cricket-score"
@@ -396,7 +401,7 @@
         "team_match_num": "5",
         "against":"N Z",
         "held_on":"2023-10-22",
-        "result": "",
+        "result": "won",
         "tour_match_num": 21,
         "at":"Dharamsala",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-new-zealand-21st-match-1384412/live-cricket-score"
@@ -442,7 +447,8 @@
   {
     "team": "Netherlands",
     "short_name": "NED",
-    "jersey": "#fc5021",
+    "jersey": "#ffa500",
+    "position":10,
     "matches": [
       {
         "team_match_num": "1",
@@ -475,7 +481,7 @@
         "team_match_num": "4",
         "against":"S L",
         "held_on":"2023-10-21",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 19,
         "at":"Lucknow",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/netherlands-vs-sri-lanka-19th-match-1384410/live-cricket-score"
@@ -484,7 +490,7 @@
         "team_match_num": "5",
         "against":"AUS",
         "held_on":"2023-10-25",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 24,
         "at":"Delhi",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-netherlands-24th-match-1384415/live-cricket-score"
@@ -531,6 +537,7 @@
     "team": "New Zealand",
     "short_name": "N Z",
     "jersey": "#232428",
+    "position":3,
     "matches": [
       {
         "team_match_num": "won",
@@ -572,7 +579,7 @@
         "team_match_num": "5",
         "against":"IND",
         "held_on":"2023-10-22",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 21,
         "at":"Dharamsala",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-new-zealand-21st-match-1384412/live-cricket-score"
@@ -619,6 +626,7 @@
     "team": "Pakistan",
     "short_name": "PAK",
     "jersey": "#294c3e",
+    "position":6,
     "matches": [
       {
         "team_match_num": "1",
@@ -651,7 +659,7 @@
         "team_match_num": "4",
         "against":"AUS",
         "held_on":"2023-10-20",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 18,
         "at":"Bangalore",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-pakistan-18th-match-1384409/live-cricket-score"
@@ -660,7 +668,7 @@
         "team_match_num": "5",
         "against":"AFG",
         "held_on":"2023-10-23",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 22,
         "at":"Chennai",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/afghanistan-vs-pakistan-22nd-match-1384413/live-cricket-score"
@@ -707,6 +715,7 @@
     "team": "South Africa",
     "short_name": "S A",
     "jersey": "#006548",
+    "position":2,
     "matches": [
       {
         "team_match_num": "1",
@@ -739,7 +748,7 @@
         "team_match_num": "4",
         "against":"ENG",
         "held_on":"2023-10-21",
-        "result": "",
+        "result": "won",
         "tour_match_num": 20,
         "at":"Wankhede",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-south-africa-20th-match-1384411/live-cricket-score"
@@ -748,7 +757,7 @@
         "team_match_num": "5",
         "against":"BAN",
         "held_on":"2023-10-24",
-        "result": "",
+        "result": "won",
         "tour_match_num": 23,
         "at":"Wankhede",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/bangladesh-vs-south-africa-23rd-match-1384414/live-cricket-score"
@@ -795,6 +804,7 @@
     "team": "Sri Lanka",
     "short_name": "S L",
     "jersey": "#2680b3",
+    "position":5,
     "matches": [
       {
         "team_match_num": "1",
@@ -827,7 +837,7 @@
         "team_match_num": "4",
         "against":"NED",
         "held_on":"2023-10-21",
-        "result": "",
+        "result": "won",
         "tour_match_num": 19,
         "at":"Lucknow",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/netherlands-vs-sri-lanka-19th-match-1384410/live-cricket-score"
@@ -836,7 +846,7 @@
         "team_match_num": "5",
         "against":"ENG",
         "held_on":"2023-10-26",
-        "result": "",
+        "result": "won",
         "tour_match_num": 25,
         "at":"Bangalore",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-sri-lanka-25th-match-1384416/live-cricket-score"
