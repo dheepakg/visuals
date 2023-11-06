@@ -2,10 +2,10 @@ const svg = d3
   .select(".canvas")
   .append("svg")
   .attr("width", 1000)
-  .attr("height", 700);
+  .attr("height", 600);
 
 const backGroundWidth = 1000;
-const backGroundHeight = 600;
+const backGroundHeight = 500;
 
 const graph = svg.append("g").attr("width", 1000).attr("height", 600);
 
@@ -14,7 +14,7 @@ graph
   .attr("x", 0)
   .attr("y", 0)
   .attr("width", backGroundWidth)
-  .attr("height", backGroundHeight)
+  .attr("height", backGroundHeight + 50)
   .attr("fill", "#fff1e5")
   .attr("stroke", "black")
   .attr("stroke-width", 3);
@@ -47,12 +47,12 @@ d3.json("cwc23.json").then((data) => {
   const roundRobinMarker = graph.selectAll("line").data(data);
   const boundaryLine = graph.selectAll("line").data(data); // Remove this at the end
   const teamName = graph.selectAll("text").data(data);
-  const endOfGroupStage = graph.selectAll("text").data(data);
-  const matchResult = graph.selectAll("rect").data(data);
+
   const matchResultOval = graph.selectAll("ellipse").data(data);
   const matchResultsquare = graph.selectAll("rect").data(data);
   const tablePosition = graph.selectAll("text").data(data);
-
+  const legendMatchResult = graph.selectAll("rect").data(data);
+  const legendDesc = graph.selectAll("text").data(data);
   // Scale
   const xScale = d3
     .scaleLinear()
@@ -62,32 +62,53 @@ d3.json("cwc23.json").then((data) => {
   baseLine
     .enter()
     .append("line")
-    .attr("x1", 0 + 30)
+    .attr("x1", 55)
     .attr("y1", backGroundHeight - 50)
     .attr("x2", backGroundWidth - 30)
     .attr("y2", backGroundHeight - 50)
     .attr("stroke", "#add8e6")
     .attr("stroke-width", 1);
 
-  boundaryLine
-    .enter()
-    .append("line")
-    .attr("x1", 35)
-    .attr("y1", backGroundHeight - 55)
-    .attr("x2", 35)
-    .attr("y2", backGroundHeight - 45)
-    .attr("stroke", "black")
-    .attr("stroke-width", 1);
+  // boundaryLine
+  //   .enter()
+  //   .append("line")
+  //   .attr("x1", 60)
+  //   .attr("y1", backGroundHeight - 55)
+  //   .attr("x2", 60)
+  //   .attr("y2", backGroundHeight - 45)
+  //   .attr("stroke", "black")
+  //   .attr("stroke-width", 1);
 
-  boundaryLine
+  // boundaryLine
+  //   .enter()
+  //   .append("line")
+  //   .attr("x1", backGroundWidth - 35)
+  //   .attr("y1", backGroundHeight - 55)
+  //   .attr("x2", backGroundWidth - 35)
+  //   .attr("y2", backGroundHeight - 45)
+  //   .attr("stroke", "black")
+  //   .attr("stroke-width", 1);
+
+  legendMatchResult
     .enter()
-    .append("line")
-    .attr("x1", backGroundWidth - 35)
-    .attr("y1", backGroundHeight - 55) //545
-    .attr("x2", backGroundWidth - 35)
-    .attr("y2", backGroundHeight - 45) //555
-    .attr("stroke", "black")
-    .attr("stroke-width", 1);
+    .append("rect")
+    .attr("height", 20)
+    .attr("width", 20)
+    .attr("x", 10)
+    .attr("y", 500)
+    .attr("fill", "#e60000")
+    .attr("stroke-width", 1)
+    .attr("stroke", "cyan");
+
+  legendDesc
+    .enter()
+    .append("text")
+    .text("Each box indicates a match. Lost match is filled with red")
+    .attr("x", 50)
+    .attr("y", 515)
+    // .attr("font", "lato")
+    .attr("font", "Lato")
+    .attr("font-size", 15);
 
   console.log();
 
@@ -172,18 +193,18 @@ d3.json("cwc23.json").then((data) => {
   roundRobinMarker
     .enter()
     .append("line")
-    .attr("x1", 0 + 75)
+    .attr("x1", 65)
     .attr("y1", backGroundHeight - 260)
-    .attr("x2", backGroundWidth - 50)
+    .attr("x2", backGroundWidth - 30)
     .attr("y2", backGroundHeight - 260)
     .attr("stroke", "#add8e6")
     .attr("stroke-width", 1);
   roundRobinMarker
     .enter()
     .append("line")
-    .attr("x1", 0 + 75)
+    .attr("x1", 65)
     .attr("y1", backGroundHeight - 240)
-    .attr("x2", backGroundWidth - 50)
+    .attr("x2", backGroundWidth - 30)
     .attr("y2", backGroundHeight - 240)
     .attr("stroke", "#add8e6")
     .attr("stroke-width", 1);
