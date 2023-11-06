@@ -110,6 +110,15 @@ d3.json("cwc23.json").then((data) => {
     .attr("font", "Lato")
     .attr("font-size", 15);
 
+  legendDesc
+    .enter()
+    .append("text")
+    .text("Round 1")
+    .attr("x", 20)
+    .attr("y", backGroundHeight - 60)
+    .attr("font", "lato")
+    .attr("font-size", 10);
+
   console.log();
 
   for (i = 0; i < data.length; i++) {
