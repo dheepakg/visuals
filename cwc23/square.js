@@ -42,6 +42,17 @@ function tablePositionColor(position) {
   }
 }
 
+function semiMatchesPosition(team_match_num) {
+  if (team_match_num <= 9) {
+    // League matches
+    return 0;
+  } else if (team_match_num === 10) {
+    return 20;
+  } else {
+    return 30;
+  }
+}
+
 d3.json("cwc23.json").then((data) => {
   const baseLine = graph.selectAll("line").data(data);
   const roundRobinMarker = graph.selectAll("line").data(data);
@@ -53,6 +64,8 @@ d3.json("cwc23.json").then((data) => {
   const tablePosition = graph.selectAll("text").data(data);
   const legendMatchResult = graph.selectAll("rect").data(data);
   const legendDesc = graph.selectAll("text").data(data);
+  const semiMatches = graph.selectAll("rect").data(data);
+
   // Scale
   const xScale = d3
     .scaleLinear()
@@ -68,26 +81,6 @@ d3.json("cwc23.json").then((data) => {
     .attr("y2", backGroundHeight - 50)
     .attr("stroke", "#add8e6")
     .attr("stroke-width", 1);
-
-  // boundaryLine
-  //   .enter()
-  //   .append("line")
-  //   .attr("x1", 60)
-  //   .attr("y1", backGroundHeight - 55)
-  //   .attr("x2", 60)
-  //   .attr("y2", backGroundHeight - 45)
-  //   .attr("stroke", "black")
-  //   .attr("stroke-width", 1);
-
-  // boundaryLine
-  //   .enter()
-  //   .append("line")
-  //   .attr("x1", backGroundWidth - 35)
-  //   .attr("y1", backGroundHeight - 55)
-  //   .attr("x2", backGroundWidth - 35)
-  //   .attr("y2", backGroundHeight - 45)
-  //   .attr("stroke", "black")
-  //   .attr("stroke-width", 1);
 
   legendMatchResult
     .enter()
@@ -142,58 +135,103 @@ d3.json("cwc23.json").then((data) => {
       const heldOn = data[i].matches[j].held_on;
       const url = data[i].matches[j].url;
 
-      matchResultsquare
-        .enter()
-        .append("a")
-        .attr("xlink:href", url)
-        .attr("target", "_blank")
-        .append("rect")
-        .attr("x", xScale(i) + 5 - 3)
-        .attr("y", backGroundHeight - 70 - j * 20)
-        .attr("height", 20)
-        .attr("width", 20)
-        // .attr("fill", resultColorPicker(data[i].matches[j].result))
-        .attr(
-          "fill",
-          resultColorPicker(data[i].matches[j].result) === 0
-            ? data[i].jersey
-            : resultColorPicker(data[i].matches[j].result)
-        )
-        .attr("stroke-width", 1)
-        .attr("stroke", "cyan")
-        .on("mouseover", function (event, d) {
-          d3.select(this).attr("height", 25).attr("width", 25);
-          tip
-            .style("opacity", 1)
-            .style("left", event.pageX - 20 + "px")
-            .style("top", event.pageY - 75 + "px");
-        })
-        .on("mouseout", function (d) {
-          d3.select(this).attr("height", 20).attr("width", 20);
-          tip
-            .style("opacity", 0)
-            .html(
-              "Against:  " +
-                against +
-                " <br>" +
-                "Match No:" +
-                matchNum +
-                " <br>" +
-                "On: " +
-                heldOn +
-                " <br>" +
-                "At: " +
-                venue
-            );
-        });
+      if (data[i].matches[j].team_match_num <= 9) {
+        matchResultsquare
+          .enter()
+          .append("a")
+          .attr("xlink:href", url)
+          .attr("target", "_blank")
+          .append("rect")
+          .attr("x", xScale(i) + 5 - 3)
+          .attr("y", backGroundHeight - 72 - j * 20)
+          .attr("height", 20)
+          .attr("width", 20)
+          // .attr("fill", resultColorPicker(data[i].matches[j].result))
+          .attr(
+            "fill",
+            resultColorPicker(data[i].matches[j].result) === 0
+              ? data[i].jersey
+              : resultColorPicker(data[i].matches[j].result)
+          )
+          .attr("stroke-width", 1)
+          .attr("stroke", "cyan")
+          .on("mouseover", function (event, d) {
+            d3.select(this).attr("height", 25).attr("width", 25);
+            tip
+              .style("opacity", 1)
+              .style("left", event.pageX - 20 + "px")
+              .style("top", event.pageY - 75 + "px");
+          })
+          .on("mouseout", function (d) {
+            d3.select(this).attr("height", 20).attr("width", 20);
+            tip
+              .style("opacity", 0)
+              .html(
+                "Against:  " +
+                  against +
+                  " <br>" +
+                  "Match No:" +
+                  matchNum +
+                  " <br>" +
+                  "On: " +
+                  heldOn +
+                  " <br>" +
+                  "At: " +
+                  venue
+              );
+          });
+      } else if (data[i].matches[j].team_match_num == 10) {
+        matchResultsquare
+          .enter()
+          .append("a")
+          .attr("xlink:href", url)
+          .attr("target", "_blank")
+          .append("rect")
+          .attr("x", xScale(i) + 5 - 15)
+          .attr("y", backGroundHeight - 70 - j * 20 - 52)
+          .attr("height", 50)
+          .attr("width", 50)
+          .attr(
+            "fill",
+            resultColorPicker(data[i].matches[j].result) === 0
+              ? data[i].jersey
+              : resultColorPicker(data[i].matches[j].result)
+          )
+          .attr("stroke-width", 1)
+          .attr("stroke", "cyan")
+          .on("mouseover", function (event, d) {
+            d3.select(this).attr("height", 50).attr("width", 50);
+            tip
+              .style("opacity", 1)
+              .style("left", event.pageX - 20 + "px")
+              .style("top", event.pageY - 75 + "px");
+          })
+          .on("mouseout", function (d) {
+            d3.select(this).attr("height", 50).attr("width", 50);
+            tip
+              .style("opacity", 0)
+              .html(
+                "Against:  " +
+                  against +
+                  " <br>" +
+                  "Match No:" +
+                  matchNum +
+                  " <br>" +
+                  "On: " +
+                  heldOn +
+                  " <br>" +
+                  "At: " +
+                  venue
+              );
+          });
+      }
     }
-
     tablePosition
       .enter()
       .append("text")
       .text(data[i].position)
       .attr("x", xScale(i) + 10)
-      .attr("y", backGroundHeight - 248)
+      .attr("y", backGroundHeight - 240)
       .attr("fill", tablePositionColor(data[i].position))
       .attr("font-weight", "bold")
       .attr("font-size", 10);
@@ -203,18 +241,18 @@ d3.json("cwc23.json").then((data) => {
     .enter()
     .append("line")
     .attr("x1", 65)
-    .attr("y1", backGroundHeight - 260)
+    .attr("y1", backGroundHeight - 250)
     .attr("x2", backGroundWidth - 30)
-    .attr("y2", backGroundHeight - 260)
+    .attr("y2", backGroundHeight - 250)
     .attr("stroke", "#add8e6")
     .attr("stroke-width", 1);
   roundRobinMarker
     .enter()
     .append("line")
     .attr("x1", 65)
-    .attr("y1", backGroundHeight - 240)
+    .attr("y1", backGroundHeight - 235)
     .attr("x2", backGroundWidth - 30)
-    .attr("y2", backGroundHeight - 240)
+    .attr("y2", backGroundHeight - 235)
     .attr("stroke", "#add8e6")
     .attr("stroke-width", 1);
 
