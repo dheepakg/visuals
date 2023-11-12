@@ -22,7 +22,8 @@ graph
 function resultColorPicker(match_result) {
   if (match_result === "lost") {
     // return "#E22a09";
-    return "#e60000";
+    // return "#e60000";
+    return "#D1D6D8";
   } else if (match_result === "") {
     // Not completed
     return "white";
@@ -89,7 +90,7 @@ d3.json("cwc23.json").then((data) => {
     .attr("width", 20)
     .attr("x", 10)
     .attr("y", 500)
-    .attr("fill", "#e60000")
+    .attr("fill", resultColorPicker("lost"))
     .attr("stroke-width", 1)
     .attr("stroke", "cyan");
 
