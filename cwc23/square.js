@@ -49,8 +49,10 @@ function semiMatchesPosition(team_match_num) {
     return 0;
   } else if (team_match_num === 10) {
     return 20;
-  } else {
+  } else if (team_match_num === 11) {
     return 30;
+  } else {
+    return 60;
   }
 }
 
@@ -63,7 +65,7 @@ d3.json("cwc23.json").then((data) => {
   const tablePosition = graph.selectAll("text").data(data);
   const legendMatchResult = graph.selectAll("rect").data(data);
   const legendDesc = graph.selectAll("text").data(data);
-  const semiMatches = graph.selectAll("rect").data(data);
+  const semiMarker = graph.selectAll("text").data(data);
 
   // Scale
   const xScale = d3
@@ -113,6 +115,25 @@ d3.json("cwc23.json").then((data) => {
     .attr("text-anchor", "middle")
     .selectAll("tspan")
     .data("LEAGUE  MATCHES".split(""))
+    .enter()
+    .append("tspan")
+    .attr("x", 0)
+    .attr("dy", "0.8em")
+    .text(function (d) {
+      return d;
+    });
+
+  svg
+    .append("text")
+    .attr("x", 40)
+    .attr("y", backGroundHeight - 300)
+    .attr("font-size", 10)
+    .attr("id", "title")
+    .style("fill", "black")
+    .attr("transform", "translate(20,0)")
+    .attr("text-anchor", "middle")
+    .selectAll("tspan")
+    .data("SEMIS".split(""))
     .enter()
     .append("tspan")
     .attr("x", 0)
@@ -243,6 +264,51 @@ d3.json("cwc23.json").then((data) => {
                   venue
               );
           });
+      } else if (data[i].matches[j].team_match_num == 11) {
+        matchResultsquare
+          .enter()
+          .append("a")
+          .attr("xlink:href", url)
+          .attr("target", "_blank")
+          .append("rect")
+          .attr("x", xScale(i) + 5 - 25)
+          // .attr("y", backGroundHeight - 70 - j * 20 - 42)
+          .attr("y", 117)
+          .attr("height", 75)
+          .attr("width", 75)
+          .attr(
+            "fill",
+            resultColorPicker(data[i].matches[j].result) === 0
+              ? data[i].jersey
+              : resultColorPicker(data[i].matches[j].result)
+          )
+          .attr("stroke-width", 1)
+          .attr("stroke", "cyan")
+          .on("mouseover", function (event, d) {
+            d3.select(this).attr("height", 75).attr("width", 75);
+            tip
+              .style("opacity", 1)
+              .style("left", event.pageX - 20 + "px")
+              .style("top", event.pageY - 75 + "px");
+          })
+          .on("mouseout", function (d) {
+            d3.select(this).attr("height", 75).attr("width", 75);
+            tip
+              .style("opacity", 0)
+              .html(
+                "Against:  " +
+                  against +
+                  " <br>" +
+                  "Match No:" +
+                  matchNum +
+                  " <br>" +
+                  "On: " +
+                  heldOn +
+                  " <br>" +
+                  "At: " +
+                  venue
+              );
+          });
       }
     }
     tablePosition
@@ -275,6 +341,15 @@ d3.json("cwc23.json").then((data) => {
     .attr("stroke", "#add8e6")
     .attr("stroke-width", 1);
 
+  semiMarker
+    .enter()
+    .append("line")
+    .attr("stroke", "#add8e6")
+    .attr("stroke-width", 1)
+    .attr("x1", 65)
+    .attr("y1", backGroundHeight - 305)
+    .attr("x2", backGroundWidth - 30)
+    .attr("y2", backGroundHeight - 305);
   // Tooltip
 
   var tip = d3

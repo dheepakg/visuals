@@ -179,10 +179,19 @@
         "team_match_num": 10,
         "against": "S A",
         "held_on": "2023-11-16",
-        "result": "",
+        "result": "won",
         "tour_match_num": 47,
         "at": "Eden Gardens",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-south-africa-2nd-semi-final-1384438/live-cricket-score"
+      },
+      {
+        "team_match_num": 11,
+        "against": "IND",
+        "held_on": "2023-11-19",
+        "result": "",
+        "tour_match_num": 48,
+        "at": "Wankhede",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-australia-final-1384439/match-preview"
       }
     ]
   },
@@ -455,10 +464,19 @@
         "team_match_num": 10,
         "against": "N Z",
         "held_on": "2023-11-15",
-        "result": "",
+        "result": "won",
         "tour_match_num": 46,
         "at": "Wankhede",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-new-zealand-1st-semi-final-1384437/live-cricket-score"
+      },
+      {
+        "team_match_num": 11,
+        "against": "AUS",
+        "held_on": "2023-11-19",
+        "result": "",
+        "tour_match_num": 48,
+        "at": "Wankhede",
+        "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-australia-final-1384439/match-preview"
       }
     ]
   },
@@ -642,7 +660,7 @@
         "team_match_num": 10,
         "against": "IND",
         "held_on": "2023-11-15",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 46,
         "at": "Wankhede",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-new-zealand-1st-semi-final-1384437/live-cricket-score"
@@ -829,7 +847,7 @@
         "team_match_num": 10,
         "against": "AUS",
         "held_on": "2023-11-16",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 47,
         "at": "Eden Gardens",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-south-africa-2nd-semi-final-1384438/live-cricket-score"
