@@ -2,10 +2,10 @@ const svg = d3
   .select(".canvas")
   .append("svg")
   .attr("width", 1000)
-  .attr("height", 700);
+  .attr("height", 600);
 
 const backGroundWidth = 1000;
-const backGroundHeight = 600;
+const backGroundHeight = 500;
 
 const graph = svg.append("g").attr("width", 1000).attr("height", 600);
 
@@ -14,7 +14,7 @@ graph
   .attr("x", 0)
   .attr("y", 0)
   .attr("width", backGroundWidth)
-  .attr("height", backGroundHeight)
+  .attr("height", backGroundHeight + 50)
   .attr("fill", "#fff1e5")
   .attr("stroke", "black")
   .attr("stroke-width", 3);
@@ -22,7 +22,8 @@ graph
 function resultColorPicker(match_result) {
   if (match_result === "lost") {
     // return "#E22a09";
-    return "#e60000";
+    // return "#e60000";
+    return "#D1D6D8";
   } else if (match_result === "") {
     // Not completed
     return "white";
@@ -42,15 +43,29 @@ function tablePositionColor(position) {
   }
 }
 
+function semiMatchesPosition(team_match_num) {
+  if (team_match_num <= 9) {
+    // League matches
+    return 0;
+  } else if (team_match_num === 10) {
+    return 20;
+  } else if (team_match_num === 11) {
+    return 30;
+  } else {
+    return 60;
+  }
+}
+
 d3.json("cwc23.json").then((data) => {
   const baseLine = graph.selectAll("line").data(data);
   const roundRobinMarker = graph.selectAll("line").data(data);
-  const boundaryLine = graph.selectAll("line").data(data); // Remove this at the end
   const teamName = graph.selectAll("text").data(data);
-  const endOfGroupStage = graph.selectAll("text").data(data);
-  const matchResult = graph.selectAll("rect").data(data);
-  const matchResultOval = graph.selectAll("ellipse").data(data);
+
+  const matchResultsquare = graph.selectAll("rect").data(data);
   const tablePosition = graph.selectAll("text").data(data);
+  const legendMatchResult = graph.selectAll("rect").data(data);
+  const legendDesc = graph.selectAll("text").data(data);
+  const semiMarker = graph.selectAll("text").data(data);
 
   // Scale
   const xScale = d3
@@ -61,32 +76,81 @@ d3.json("cwc23.json").then((data) => {
   baseLine
     .enter()
     .append("line")
-    .attr("x1", 0 + 30)
+    .attr("x1", 55)
     .attr("y1", backGroundHeight - 50)
     .attr("x2", backGroundWidth - 30)
     .attr("y2", backGroundHeight - 50)
     .attr("stroke", "#add8e6")
     .attr("stroke-width", 1);
 
-  boundaryLine
+  legendMatchResult
     .enter()
-    .append("line")
-    .attr("x1", 35)
-    .attr("y1", backGroundHeight - 55)
-    .attr("x2", 35)
-    .attr("y2", backGroundHeight - 45)
-    .attr("stroke", "black")
-    .attr("stroke-width", 1);
+    .append("rect")
+    .attr("height", 20)
+    .attr("width", 20)
+    .attr("x", 10)
+    .attr("y", 500)
+    .attr("fill", resultColorPicker("lost"))
+    .attr("stroke-width", 1)
+    .attr("stroke", "cyan");
 
-  boundaryLine
+  legendDesc
     .enter()
-    .append("line")
-    .attr("x1", backGroundWidth - 35)
-    .attr("y1", backGroundHeight - 55) //545
-    .attr("x2", backGroundWidth - 35)
-    .attr("y2", backGroundHeight - 45) //555
-    .attr("stroke", "black")
-    .attr("stroke-width", 1);
+    .append("text")
+    .text("Each box indicates a match. Lost match is in grey")
+    .attr("x", 50)
+    .attr("y", 515)
+    // .attr("font", "lato")
+    .attr("font", "Lato")
+    .attr("font-size", 15);
+
+  svg
+    .append("text")
+    .attr("x", 40)
+    .attr("y", backGroundHeight - 230)
+    .attr("font-size", 10)
+    .attr("id", "title")
+    .style("fill", "black")
+    .attr("transform", "translate(20,0)")
+    .attr("text-anchor", "middle")
+    .selectAll("tspan")
+    .data("LEAGUE  MATCHES".split(""))
+    .enter()
+    .append("tspan")
+    .attr("x", 0)
+    .attr("dy", "0.8em")
+    .text(function (d) {
+      return d;
+    });
+
+  svg
+    .append("text")
+    .attr("x", 40)
+    .attr("y", backGroundHeight - 300)
+    .attr("font-size", 10)
+    .attr("id", "title")
+    .style("fill", "black")
+    .attr("transform", "translate(20,0)")
+    .attr("text-anchor", "middle")
+    .selectAll("tspan")
+    .data("SEMIS".split(""))
+    .enter()
+    .append("tspan")
+    .attr("x", 0)
+    .attr("dy", "0.8em")
+    .text(function (d) {
+      return d;
+    });
+
+  legendDesc
+    .enter()
+    .append("text")
+    .text("Round 1")
+    .attr("x", 20)
+    .attr("y", backGroundHeight - 60)
+    // .attr("font", "lato")
+    .attr("font-size", 10)
+    .attr("dy", "0.8em");
 
   console.log();
 
@@ -98,7 +162,7 @@ d3.json("cwc23.json").then((data) => {
       .enter()
       .append("text")
       .text(data[i].short_name)
-      .attr("x", xScale(i))
+      .attr("x", xScale(i) + 5 - 3)
       .attr("y", backGroundHeight - 40)
       .attr("fill", "black")
       .attr("font-size", 10);
@@ -111,57 +175,148 @@ d3.json("cwc23.json").then((data) => {
       const heldOn = data[i].matches[j].held_on;
       const url = data[i].matches[j].url;
 
-      matchResultOval
-        .enter()
-        .append("a")
-        .attr("xlink:href", url)
-        .attr("target", "_blank")
-        .append("ellipse")
-        .attr("cx", xScale(i) + 5)
-        .attr("cy", backGroundHeight - 65 - j * 27)
-        .attr("rx", 16)
-        .attr("ry", 12)
-        // .attr("fill", resultColorPicker(data[i].matches[j].result))
-        .attr(
-          "fill",
-          resultColorPicker(data[i].matches[j].result) === 0
-            ? data[i].jersey
-            : resultColorPicker(data[i].matches[j].result)
-        )
-        .attr("stroke-width", 1)
-        .attr("stroke", "cyan")
-        .on("mouseover", function (event, d) {
-          d3.select(this).attr("rx", 18).attr("ry", 16);
-          tip
-            .style("opacity", 1)
-            .style("left", event.pageX - 20 + "px")
-            .style("top", event.pageY - 75 + "px");
-        })
-        .on("mouseout", function (d) {
-          d3.select(this).attr("rx", 16).attr("ry", 12);
-          tip
-            .style("opacity", 0)
-            .html(
-              "Against:  " +
-                against +
-                " <br>" +
-                "Match No:" +
-                matchNum +
-                " <br>" +
-                "On: " +
-                heldOn +
-                " <br>" +
-                "At: " +
-                venue
-            );
-        });
+      if (data[i].matches[j].team_match_num <= 9) {
+        matchResultsquare
+          .enter()
+          .append("a")
+          .attr("xlink:href", url)
+          .attr("target", "_blank")
+          .append("rect")
+          .attr("x", xScale(i) + 5 - 3)
+          .attr("y", backGroundHeight - 72 - j * 20)
+          .attr("height", 20)
+          .attr("width", 20)
+          // .attr("fill", resultColorPicker(data[i].matches[j].result))
+          .attr(
+            "fill",
+            resultColorPicker(data[i].matches[j].result) === 0
+              ? data[i].jersey
+              : resultColorPicker(data[i].matches[j].result)
+          )
+          .attr("stroke-width", 1)
+          .attr("stroke", "cyan")
+          .on("mouseover", function (event, d) {
+            d3.select(this).attr("height", 25).attr("width", 25);
+            tip
+              .style("opacity", 1)
+              .style("left", event.pageX - 20 + "px")
+              .style("top", event.pageY - 75 + "px");
+          })
+          .on("mouseout", function (d) {
+            d3.select(this).attr("height", 20).attr("width", 20);
+            tip
+              .style("opacity", 0)
+              .html(
+                "Against:  " +
+                  against +
+                  " <br>" +
+                  "Match No:" +
+                  matchNum +
+                  " <br>" +
+                  "On: " +
+                  heldOn +
+                  " <br>" +
+                  "At: " +
+                  venue
+              );
+          });
+      } else if (data[i].matches[j].team_match_num == 10) {
+        matchResultsquare
+          .enter()
+          .append("a")
+          .attr("xlink:href", url)
+          .attr("target", "_blank")
+          .append("rect")
+          .attr("x", xScale(i) + 5 - 15)
+          .attr("y", backGroundHeight - 70 - j * 20 - 52)
+          .attr("height", 50)
+          .attr("width", 50)
+          .attr(
+            "fill",
+            resultColorPicker(data[i].matches[j].result) === 0
+              ? data[i].jersey
+              : resultColorPicker(data[i].matches[j].result)
+          )
+          .attr("stroke-width", 1)
+          .attr("stroke", "cyan")
+          .on("mouseover", function (event, d) {
+            d3.select(this).attr("height", 50).attr("width", 50);
+            tip
+              .style("opacity", 1)
+              .style("left", event.pageX - 20 + "px")
+              .style("top", event.pageY - 75 + "px");
+          })
+          .on("mouseout", function (d) {
+            d3.select(this).attr("height", 50).attr("width", 50);
+            tip
+              .style("opacity", 0)
+              .html(
+                "Against:  " +
+                  against +
+                  " <br>" +
+                  "Match No:" +
+                  matchNum +
+                  " <br>" +
+                  "On: " +
+                  heldOn +
+                  " <br>" +
+                  "At: " +
+                  venue
+              );
+          });
+      } else if (data[i].matches[j].team_match_num == 11) {
+        matchResultsquare
+          .enter()
+          .append("a")
+          .attr("xlink:href", url)
+          .attr("target", "_blank")
+          .append("rect")
+          .attr("x", xScale(i) + 5 - 25)
+          // .attr("y", backGroundHeight - 70 - j * 20 - 42)
+          .attr("y", 117)
+          .attr("height", 75)
+          .attr("width", 75)
+          .attr(
+            "fill",
+            resultColorPicker(data[i].matches[j].result) === 0
+              ? data[i].jersey
+              : resultColorPicker(data[i].matches[j].result)
+          )
+          .attr("stroke-width", 1)
+          .attr("stroke", "cyan")
+          .on("mouseover", function (event, d) {
+            d3.select(this).attr("height", 75).attr("width", 75);
+            tip
+              .style("opacity", 1)
+              .style("left", event.pageX - 20 + "px")
+              .style("top", event.pageY - 75 + "px");
+          })
+          .on("mouseout", function (d) {
+            d3.select(this).attr("height", 75).attr("width", 75);
+            tip
+              .style("opacity", 0)
+              .html(
+                "Against:  " +
+                  against +
+                  " <br>" +
+                  "Match No:" +
+                  matchNum +
+                  " <br>" +
+                  "On: " +
+                  heldOn +
+                  " <br>" +
+                  "At: " +
+                  venue
+              );
+          });
+      }
     }
     tablePosition
       .enter()
       .append("text")
       .text(data[i].position)
       .attr("x", xScale(i) + 10)
-      .attr("y", backGroundHeight - 305)
+      .attr("y", backGroundHeight - 240)
       .attr("fill", tablePositionColor(data[i].position))
       .attr("font-weight", "bold")
       .attr("font-size", 10);
@@ -170,22 +325,31 @@ d3.json("cwc23.json").then((data) => {
   roundRobinMarker
     .enter()
     .append("line")
-    .attr("x1", 0 + 60)
-    .attr("y1", backGroundHeight - 320)
-    .attr("x2", backGroundWidth - 50)
-    .attr("y2", backGroundHeight - 320)
+    .attr("x1", 65)
+    .attr("y1", backGroundHeight - 250)
+    .attr("x2", backGroundWidth - 30)
+    .attr("y2", backGroundHeight - 250)
     .attr("stroke", "#add8e6")
     .attr("stroke-width", 1);
   roundRobinMarker
     .enter()
     .append("line")
-    .attr("x1", 0 + 60)
-    .attr("y1", backGroundHeight - 300)
-    .attr("x2", backGroundWidth - 50)
-    .attr("y2", backGroundHeight - 300)
+    .attr("x1", 65)
+    .attr("y1", backGroundHeight - 235)
+    .attr("x2", backGroundWidth - 30)
+    .attr("y2", backGroundHeight - 235)
     .attr("stroke", "#add8e6")
     .attr("stroke-width", 1);
 
+  semiMarker
+    .enter()
+    .append("line")
+    .attr("stroke", "#add8e6")
+    .attr("stroke-width", 1)
+    .attr("x1", 65)
+    .attr("y1", backGroundHeight - 305)
+    .attr("x2", backGroundWidth - 30)
+    .attr("y2", backGroundHeight - 305);
   // Tooltip
 
   var tip = d3
