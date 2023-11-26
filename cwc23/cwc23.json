@@ -188,7 +188,7 @@
         "team_match_num": 11,
         "against": "IND",
         "held_on": "2023-11-19",
-        "result": "",
+        "result": "won",
         "tour_match_num": 48,
         "at": "Wankhede",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-australia-final-1384439/match-preview"
@@ -473,7 +473,7 @@
         "team_match_num": 11,
         "against": "AUS",
         "held_on": "2023-11-19",
-        "result": "",
+        "result": "lost",
         "tour_match_num": 48,
         "at": "Wankhede",
         "url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-australia-final-1384439/match-preview"

@@ -63,6 +63,8 @@ d3.json("cwc23.json").then((data) => {
 
   const matchResultsquare = graph.selectAll("rect").data(data);
   const tablePosition = graph.selectAll("text").data(data);
+  const legendMatchResult = graph.selectAll("rect").data(data);
+  const legendDesc = graph.selectAll("text").data(data);
   const semiMarker = graph.selectAll("text").data(data);
 
   // Scale
@@ -80,6 +82,27 @@ d3.json("cwc23.json").then((data) => {
     .attr("y2", backGroundHeight - 50)
     .attr("stroke", "#add8e6")
     .attr("stroke-width", 1);
+
+  legendMatchResult
+    .enter()
+    .append("rect")
+    .attr("height", 20)
+    .attr("width", 20)
+    .attr("x", 10)
+    .attr("y", 500)
+    .attr("fill", resultColorPicker("lost"))
+    .attr("stroke-width", 1)
+    .attr("stroke", "cyan");
+
+  legendDesc
+    .enter()
+    .append("text")
+    .text("Each box indicates a match. Lost match is in grey")
+    .attr("x", 50)
+    .attr("y", 515)
+    // .attr("font", "lato")
+    .attr("font", "Lato")
+    .attr("font-size", 15);
 
   svg
     .append("text")
@@ -119,6 +142,18 @@ d3.json("cwc23.json").then((data) => {
       return d;
     });
 
+  legendDesc
+    .enter()
+    .append("text")
+    .text("Round 1")
+    .attr("x", 20)
+    .attr("y", backGroundHeight - 60)
+    // .attr("font", "lato")
+    .attr("font-size", 10)
+    .attr("dy", "0.8em");
+
+  console.log();
+
   for (i = 0; i < data.length; i++) {
     // console.log(data[i].short_name, data[i].jersey);
     const team1 = data[i].team;
@@ -143,11 +178,15 @@ d3.json("cwc23.json").then((data) => {
       if (data[i].matches[j].team_match_num <= 9) {
         matchResultsquare
           .enter()
+          .append("a")
+          .attr("xlink:href", url)
+          .attr("target", "_blank")
           .append("rect")
           .attr("x", xScale(i) + 5 - 3)
           .attr("y", backGroundHeight - 72 - j * 20)
           .attr("height", 20)
           .attr("width", 20)
+          // .attr("fill", resultColorPicker(data[i].matches[j].result))
           .attr(
             "fill",
             resultColorPicker(data[i].matches[j].result) === 0
@@ -228,10 +267,12 @@ d3.json("cwc23.json").then((data) => {
       } else if (data[i].matches[j].team_match_num == 11) {
         matchResultsquare
           .enter()
+          .append("a")
+          .attr("xlink:href", url)
+          .attr("target", "_blank")
           .append("rect")
-          .attr("id", "match_" + data[i].matches[j].tour_match_num)
-          .classed("match_" + data[i].matches[j].tour_match_num, true)
           .attr("x", xScale(i) + 5 - 25)
+          // .attr("y", backGroundHeight - 70 - j * 20 - 42)
           .attr("y", 117)
           .attr("height", 75)
           .attr("width", 75)
@@ -243,8 +284,8 @@ d3.json("cwc23.json").then((data) => {
           )
           .attr("stroke-width", 1)
           .attr("stroke", "cyan")
-          .on("click", function (event, d) {
-            d3.select("#match_48").attr("height", 80).attr("width", 80);
+          .on("mouseover", function (event, d) {
+            d3.select(this).attr("height", 75).attr("width", 75);
             tip
               .style("opacity", 1)
               .style("left", event.pageX - 20 + "px")
