@@ -1,6 +1,6 @@
 # Visuals
-Here are some visualizations
 
-Each folders consists of visualizations - Code & Result.
+`data` - holds json files for datavis
+`src` - js file for datavis
 
 
