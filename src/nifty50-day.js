@@ -46,6 +46,7 @@ d3.csv("../data/N50_daily.csv").then(function(data){
 // Define x & y domains
 x.domain(d3.extent(data, d=> d.date));
 
+
 // y.domain(d3.extent(data, d=>d.close));
 y.domain([15000, d3.max(data, d=>d.close)+1000]);
 
@@ -214,7 +215,7 @@ svg.append("text")
     .style("font-size", "30px")
     .style("font-weight", "bold")
     .style("font-family","sans-serif")
-    .text("Nifty 50 Index movement - 2022")
+    .text("Nifty 50 Index movement - 2022");
 
 
 // Add source Element
@@ -225,6 +226,17 @@ svg.append("text")
     .attr("y", 2* height + margin.bottom )
     .style("font-size", "9px")
     .style("font-family", "sans-serif")
-    .text("Source: https://www.nseindia.com/reports-indices-historical-index-data")
+    .text("Source: https://www.nseindia.com/reports-indices-historical-index-data");
+
+
+// Add reference Element
+
+svg.append("text")
+    .attr("class", "source-credit")
+    .attr("x", width - 1125)
+    .attr("y", 2* height + margin.bottom + 20)
+    .style("font-size", "9px")
+    .style("font-family", "sans-serif")
+    .text("Reference: https://youtu.be/Wk8pIxcidv8?si=ftMztRib2XzQ6IKG")
 
     })
