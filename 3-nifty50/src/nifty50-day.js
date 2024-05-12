@@ -34,7 +34,7 @@ const tooltip = d3.select("body")
 
 // Import data
 
-d3.csv("../data/N50_daily.csv").then(function(data){
+d3.csv("./data/N50_daily.csv").then(function(data){
     const parseDate = d3.timeParse("%d-%m-%Y");
     data.forEach(d => {
         d.date = parseDate(d.Date);
