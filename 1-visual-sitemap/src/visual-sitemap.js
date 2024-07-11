@@ -45,6 +45,13 @@ function yearCompleted(input_year) {
     return 365;
   }
 }
+
+function markerForCurrentYear(input_year){
+  // if current year then marker; else leave as it is
+
+}
+
+
 d3.json("./data/visual-sitemap.json").then((data) => {
   // Sclaing
   // Defines the year line
@@ -113,7 +120,8 @@ d3.json("./data/visual-sitemap.json").then((data) => {
     .transition()
     .duration(1200)
     .attr("x2", (d) => xScale(yearCompleted(d.year)) * 1.0)
-    .attr("stroke-width", 2);
+    .attr("stroke-width", 2)
+    .attr("marker-end", "url(#triangle)")
 
   circles
     .enter()
@@ -146,6 +154,19 @@ d3.json("./data/visual-sitemap.json").then((data) => {
       d3.select(this).attr("r", 3).attr("fill", "#0000EE");
       tip.style("opacity", 0);
     });
+
+  // Triangle denoting today
+ svg.append("svg:defs").append("svg:marker")
+    .attr("id", "triangle")
+    .attr("refX", 3)
+    .attr("refY", 3)
+    .attr("markerWidth", 10)
+    .attr("markerHeight", 10)
+    .attr("orient", "auto")
+    .append("path")
+    .attr("d", "M 0 0 12 6 0 12 3 6")
+    .style("fill", "black");
+
 
   // Tooltip
 
