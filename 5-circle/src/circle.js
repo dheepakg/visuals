@@ -18,15 +18,21 @@ svg.append('circle')
     .attr('fill', 'blue')
     .attr('opacity', 0.05)
 
+// Function to decide minor markers
+function marker_width(iter){
+    if (iter%5 == 0) { return 3}
+    else {return 0}
+
+}
 
 // Creates 12 lines on watch face
 
-for (let i = 0; i <= marker_lines ; i++) {
+for (let i = 0; i <= 60 ; i++) {
 
 
-        var x_calc = center.x1 + (radius * 1.15) * Math.cos(2* Math.PI * ( i) / marker_lines);
+        var x_calc = center.x1 + (radius * 1.15) * Math.cos(2* Math.PI * ( i) / 60);
 
-        var y_calc = center.x1 + (radius * 1.15) * Math.sin(2*  Math.PI * ( i) / marker_lines);
+        var y_calc = center.x1 + (radius * 1.15) * Math.sin(2*  Math.PI * ( i) / 60);
 
         // Marker line along radius
         svg.append('line')
@@ -34,8 +40,8 @@ for (let i = 0; i <= marker_lines ; i++) {
             .attr('y1', center.y1)
             .attr('x2', x_calc)
             .attr('y2', y_calc )
-            .attr('stroke', 'green')
-            .attr('stroke-width',2)
+            .attr('stroke', 'black')
+            .attr('stroke-width',marker_width(i))
             .attr("class", "line_marker")
 
     }
@@ -49,7 +55,8 @@ svg.append('circle')
     .attr('cx', center.x1)
     .attr('cy', center.y1)
     .attr('r', radius)
-    .attr('fill', '#eadbcb');
+    // .attr('fill', '#eadbcb');
+    .attr('fill', '#f2f4ff');
 
 // Centre point
 svg.append('circle')
@@ -133,7 +140,7 @@ async function seconds_arm_in_clock() {
             .attr('x2', x_secs)
             .attr('y2', y_secs )
             .attr('stroke', 'red')
-            .attr('stroke-width',2)
+            .attr('stroke-width',3)
             .attr("class", "secs_arm")
 
         // To have the radius rotates indefinitely
@@ -180,7 +187,7 @@ async function minutes_arm_in_clock() {
             .attr('x2', x_mins)
             .attr('y2', y_mins )
             .attr('stroke', 'brown')
-            .attr('stroke-width',2)
+            .attr('stroke-width',3)
             .attr("class", "minutes_arm");
 
 
@@ -226,7 +233,7 @@ async function hour_arm_in_clock() {
             .attr('x2', x_hrs)
             .attr('y2', y_hrs )
             .attr('stroke', 'black')
-            .attr('stroke-width',2)
+            .attr('stroke-width',3)
             .attr("class", "hours_arm");
 
 
