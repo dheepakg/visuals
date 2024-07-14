@@ -3,11 +3,10 @@ var svg = d3.select(".canvas").append("svg").attr("width", 600).attr("height", 6
 
 center = {'x1': 300, 'y1':300}
 radius  = 200
-offset = 50
-no_of_lines = 60
+// offset = 50
+// no_of_lines = 60
 marker_lines = 12
-indefinite_rotation = true
-// indefinite_rotation = false
+opacity = 0.05
 
 // Marker circle - holds 12 lines in the watchface
 svg.append('circle')
@@ -16,46 +15,35 @@ svg.append('circle')
     .attr('r', radius * 1.15)
     .attr('stroke', 'black')
     .attr('fill', 'blue')
-    .attr('opacity', 0.05)
+    .attr('opacity', opacity)
 
-// Function to decide minor markers
-function marker_width(iter){
-    if (iter%5 == 0) { return 3}
-    else {return 0}
-
-}
 
 // Creates 12 lines on watch face
 
 for (let i = 0; i <= 60 ; i++) {
 
-
         var x_calc = center.x1 + (radius * 1.15) * Math.cos(2* Math.PI * ( i) / 60);
-
         var y_calc = center.x1 + (radius * 1.15) * Math.sin(2*  Math.PI * ( i) / 60);
 
         // Marker line along radius
-        svg.append('line')
-            .attr('x1', center.x1)
-            .attr('y1', center.y1)
-            .attr('x2', x_calc)
-            .attr('y2', y_calc )
-            .attr('stroke', 'black')
-            .attr('stroke-width',marker_width(i))
-            .attr("class", "line_marker")
-
+        if (i%5 == 0 ) {
+            svg.append('line')
+                .attr('x1', center.x1)
+                .attr('y1', center.y1)
+                .attr('x2', x_calc)
+                .attr('y2', y_calc )
+                .attr('stroke', 'black')
+                .attr('stroke-width',3)
+                .attr("class", "line_marker")
+                .attr("opacity", 0.2)
+            }
     }
-
-
-
-
 
 // Bigger circle
 svg.append('circle')
     .attr('cx', center.x1)
     .attr('cy', center.y1)
     .attr('r', radius)
-    // .attr('fill', '#eadbcb');
     .attr('fill', '#f2f4ff');
 
 // Centre point
@@ -66,184 +54,54 @@ svg.append('circle')
     .attr('stroke', 'black')
     .attr('fill', 'blue')
 
-
-
-
-
-
-    // Vertical line
-svg.append('line')
-    .attr('x1', center.x1)
-    .attr('y1', center.x1 + center.y1 - offset)
-    .attr('x2', center.x1 )
-    .attr('y2', center.x1 - center.y1 + offset )
-    .attr('stroke', 'grey')
-    .attr('opacity',0.05);
-
-    // Horizontal line
-svg.append('line')
-    .attr('x1', center.x1 + center.y1 - offset)
-    .attr('y1', center.y1)
-    .attr('x2', center.x1 - center.y1 + offset )
-    .attr('y2', center.y1 )
-    .attr('stroke', 'grey')
-    .attr('opacity',0.05);
-
-
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-
 var date = new Date();
-secs = date.getSeconds();
-mins = date.getMinutes();
 
+async function arm_in_the_clockface(arm_is_for,sleep_timer, time_uom, arm_color, arm_length=1 ) {
+    let offset = 0;
+    for (let i = 0; i<=time_uom; i++ ){
+        var date = new Date();
+        if (arm_is_for == 'hours')      { time_unit = date.getHours();      offset = 3;     }
+        else if (arm_is_for == 'mins')  { time_unit = date.getMinutes();    offset = 15;    }
+        else if (arm_is_for == 'secs')  { time_unit = date.getSeconds();    offset = 15;    }
 
-// This is for seconds arm to go around clock
-async function seconds_arm_in_clock() {
-    for (let j = 46; j <= no_of_lines ; j++) {
-        // j = 46; to sync the seconds hand with the 90degree.
-        // Do not modify
-        i = j + secs;
-        // secs = 0;
+        var x2_calc = center.x1 + (radius * arm_length) * Math.cos(2* Math.PI * ( time_unit - offset) / time_uom);
+        var y2_calc = center.x1 + (radius * arm_length) * Math.sin(2* Math.PI * ( time_unit - offset) / time_uom);
 
-
-        var x_secs = center.x1 + (radius + 15) * Math.cos(2* Math.PI * ( i) / no_of_lines);
-
-        var y_secs = center.x1 + (radius + 15) * Math.sin(2*  Math.PI * ( i) / no_of_lines);
-
-        // console.log('angle',i, ( i), 2*Math.PI * ( i)/no_of_lines)
-
-        await sleep(1000);
-
-        // To remove the radius from prev position
-        d3.select(".secs_arm").remove();
-        d3.select(".time_display").remove();
+        d3.select("." + arm_is_for + "_arm").remove();
+        d3.select("." + "time_display").remove();
 
         svg.append('text')
-            .attr('x', 500)
+            .attr('x', 275)
             .attr('y', 120)
             .text(function(d) {
                     var d = new Date();
-                    return String(d.getHours()).padStart(2,'0') + ':'
-                                + String(d.getMinutes()).padStart(2,'0') + ':'
-                                + String(d.getSeconds()).padStart(2,'0'); })
-            .attr("class", "time_display");
+                    return String(d.getHours()).padStart(2,'0')   + ':'
+                        +  String(d.getMinutes()).padStart(2,'0') + ':'
+                        +  String(d.getSeconds()).padStart(2,'0');
+                    })
+            .attr("class", "time_display")
+            .attr("fill", '#DA9100');
 
-        // console.log(x_secs, y_secs)
-
-            // Rotating radius
         svg.append('line')
             .attr('x1', center.x1)
             .attr('y1', center.y1)
-            .attr('x2', x_secs)
-            .attr('y2', y_secs )
-            .attr('stroke', 'red')
+            .attr('x2', x2_calc )
+            .attr('y2', y2_calc )
+            .attr('stroke', arm_color)
             .attr('stroke-width',3)
-            .attr("class", "secs_arm")
+            .attr("class", arm_is_for + "_arm")
+            .attr('opacity', 0.8)
 
-        // To have the radius rotates indefinitely
-        if (j == no_of_lines && indefinite_rotation == true)  {
-            j = 0;
-        }
-
-    }
-
-    }
-
-seconds_arm_in_clock()
-
-
-// This is for seconds arm to go around clock
-async function minutes_arm_in_clock() {
-// function minutes_arm_in_clock() {
-    for (let j = 46; j <= no_of_lines ; j++) {
-        // j = 46; to sync the seconds hand with the 90degree.
-        // Do not modify
-        var date = new Date();
-        mins = date.getMinutes();
-        i = j + mins;
-        // secs = 0;
-
-
-        var x_mins = center.x1 + radius * Math.cos(2* Math.PI * ( mins - 15) / no_of_lines);
-
-        var y_mins = center.x1 + radius * Math.sin(2*  Math.PI * ( mins - 15) / no_of_lines);
-
-        // console.log('minutes',i, ( i), 2*Math.PI * ( i)/no_of_lines)
-
-        //  sleep(60 * 1000);
-
-        // To remove the radius from prev position
-        d3.select(".minutes_arm").remove();
-
-        // console.log(x_mins, y_mins)
-
-            // Rotating radius
-        svg.append('line')
-            .attr('x1', center.x1)
-            .attr('y1', center.y1)
-            .attr('x2', x_mins)
-            .attr('y2', y_mins )
-            .attr('stroke', 'brown')
-            .attr('stroke-width',3)
-            .attr("class", "minutes_arm");
-
-
-
-        // To have the radius rotates indefinitely
-        if (j == no_of_lines && indefinite_rotation == true)  {
-            j = 0;
-        }
-        await sleep( 5000);
+        await sleep( sleep_timer);
     }
 
 }
 
-minutes_arm_in_clock()
 
-async function hour_arm_in_clock() {
-    for (let j = 0; j <= marker_lines ; j++) {
-        // j = 46; to sync the seconds hand with the 90degree.
-        // Do not modify
-        var date = new Date();
-        hours = date.getHours() % 12;
-        i = j + hours;
-        console.log('hours', hours)
-
-
-        var x_hrs = center.x1 + (radius * 0.8) * Math.cos(2* Math.PI * ( hours - 3) / marker_lines);
-
-        var y_hrs = center.x1 + (radius * 0.8) * Math.sin(2*  Math.PI * ( hours - 3) / marker_lines);
-
-        console.log('hours',i, ( i), 2*Math.PI * ( i)/no_of_lines)
-
-        //  sleep(60 * 1000);
-
-        // To remove the radius from prev position
-        d3.select(".hours_arm").remove();
-
-        console.log(x_hrs, x_hrs)
-
-            // Rotating radius
-        svg.append('line')
-            .attr('x1', center.x1)
-            .attr('y1', center.y1)
-            .attr('x2', x_hrs)
-            .attr('y2', y_hrs )
-            .attr('stroke', 'black')
-            .attr('stroke-width',3)
-            .attr("class", "hours_arm");
-
-
-
-        // To have the radius rotates indefinitely
-        if (j == no_of_lines && indefinite_rotation == true)  {
-            j = 0;
-        }
-        await sleep( 10000);
-    }
-
-}
-hour_arm_in_clock()
+arm_in_the_clockface(arm_is_for='secs', sleep_timer=1000, time_uom=60, arm_color = 'red', arm_length = 1.05)
+arm_in_the_clockface(arm_is_for='mins', sleep_timer=2000, time_uom=60, arm_color = 'brown')
+arm_in_the_clockface(arm_is_for='hours',sleep_timer=1000, time_uom=12, arm_color = 'black', arm_length=0.8)
