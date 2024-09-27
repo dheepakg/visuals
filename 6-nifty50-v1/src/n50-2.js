@@ -1,5 +1,5 @@
 // create svg element:
-var svg = d3.select(".canvas").append("svg").attr("width", 2000).attr("height", 5800)
+var svg = d3.select(".canvas").append("svg").attr("width", 2000).attr("height", 5650)
 
 
 width = { 'square': 20, 'rect':10, 'long': 50}
@@ -58,7 +58,7 @@ d3.csv('./data/nifty_50_2023.csv').then((data) => {
         .on("mouseover", function (event, d) {
             d3.select(this).attr('stroke', 'black').attr('stroke-width', 3);
             tip.style("opacity", 1)
-                .style("left", event.pageX + 350 + "px")
+                .style("left", 300 + 250 + "px")
                 .style("top", event.pageY-20  + "px")
                 .html(
                         "<b>Day </b>    &nbsp;&nbsp;&nbsp;&nbsp;    : "  + data[row]['day_count'] +
@@ -125,7 +125,7 @@ for (let row =0; row < data.length; row++){
         .on("mouseover", function (event, d) {
             d3.select(this).attr('stroke', 'black').attr('stroke-width', 3);
             tip.style("opacity", 1)
-                .style("left", event.pageX + 300 + "px")
+                .style("left", 300 + 250 + "px")
                 .style("top", event.pageY-20  + "px")
                 .html(
                         "<b>Day </b>    &nbsp;&nbsp;&nbsp;&nbsp;    : "  + data[row]['day_count'] +
@@ -192,7 +192,7 @@ for (let row =0; row < data.length; row++){
         .on("mouseover", function (event, d) {
             d3.select(this).attr('stroke', 'black').attr('stroke-width', 3);
             tip.style("opacity", 1)
-                .style("left", event.pageX + 250 + "px")
+                .style("left", 300 + 250 + "px")
                 .style("top", event.pageY-20  + "px")
                 .html(
                         "<b>Day </b>    &nbsp;&nbsp;&nbsp;&nbsp;    : "  + data[row]['day_count'] +
@@ -259,7 +259,7 @@ for (let row =0; row < data.length; row++){
         .on("mouseover", function (event, d) {
             d3.select(this).attr('stroke', 'black').attr('stroke-width', 3);
             tip.style("opacity", 1)
-                .style("left", event.pageX + 180 + "px")
+                .style("left", 300 + 250 + "px")
                 .style("top", event.pageY-20  + "px")
                 .html(
                         "<b>Day </b>    &nbsp;&nbsp;&nbsp;&nbsp;    : "  + data[row]['day_count'] +
