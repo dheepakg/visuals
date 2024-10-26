@@ -36,13 +36,15 @@ d3.csv('./data/nifty_50_2023.csv').then((data) => {
         .attr('font-size',15)
         .attr('font-family','monospace');
 
-    // Y Axis - Days
-    svg.append('text')
-        .text(cnt)
-        .attr('x', 10)
-        .attr('y', 75 + (row * 22) )
-        .attr('font-size',15)
-        .attr('font-family', 'monospace')
+    // // Y Axis - Days
+    // svg.append('text')
+    //     .text(cnt)
+    //     .attr('x', 10)
+    //     .attr('y', 75 + (row * 22) )
+    //     .attr('font-size',15)
+    //     .attr('font-family', 'monospace');
+    //     // .style("text-anchor","end");
+
 
     if (ENABLE_CHART) {
     // Rectangles with colored
@@ -103,13 +105,14 @@ d3.csv('./data/nifty_50_2022.csv').then((data) => {
         .attr('font-size',15)
         .attr('font-family','monospace');
 
-    // Y Axis - Days
-    svg.append('text')
-        .text(cnt)
-        .attr('x', 10)
-        .attr('y', 75 + (row * 22) )
-        .attr('font-size',15)
-        .attr('font-family', 'monospace')
+    // // Y Axis - Days
+    // svg.append('text')
+    //     .text(cnt)
+    //     .attr('x', 10)
+    //     .attr('y', 75 + (row * 22) )
+    //     .attr('font-size',15)
+    //     .attr('font-family', 'monospace');
+    //     // .style("text-anchor","end");
 
     if (ENABLE_CHART) {
     // Rectangles with colored
@@ -170,13 +173,14 @@ for (let row =0; row < data.length; row++){
         .attr('font-size',15)
         .attr('font-family','monospace');
 
-    // Y Axis - Days
-    svg.append('text')
-        .text(cnt)
-        .attr('x', 10)
-        .attr('y', 75 + (row * 22) )
-        .attr('font-size',15)
-        .attr('font-family', 'monospace')
+    // // Y Axis - Days
+    // svg.append('text')
+    //     .text(cnt)
+    //     .attr('x', 10)
+    //     .attr('y', 75 + (row * 22) )
+    //     .attr('font-size',15)
+    //     .attr('font-family', 'monospace');
+    //     // .style("text-anchor","end");;
 
     if (ENABLE_CHART) {
     // Rectangles with colored
@@ -243,7 +247,8 @@ for (let row =0; row < data.length; row++){
         .attr('x', 10)
         .attr('y', 75 + (row * 22) )
         .attr('font-size',15)
-        .attr('font-family', 'monospace')
+        .attr('font-family', 'monospace');
+        // .style("text-anchor","begin");
 
     if (ENABLE_CHART) {
     // Rectangles with colored
