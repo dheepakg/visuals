@@ -84,7 +84,7 @@ d3.csv('./data/nifty_50_2023.csv').then((data) => {
 
 d3.csv('./data/nifty_50_2022.csv').then((data) => {
 
-for (let row =0; row < data.length; row++){
+    for (let row =0; row < data.length; row++){
 
     // console.log(data[row])
 
