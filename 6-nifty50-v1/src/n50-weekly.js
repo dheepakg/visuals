@@ -60,6 +60,32 @@ function day_as_number(day){
 // console.log(checkedValue);
 
 let read_year = 2020;
+let read_year1 = 2023;
+// get all checkboxes
+var checkBoxes = document.querySelectorAll('input[type=radio]');
+console.log(checkBoxes)
+// add event listener to each checkbox
+for (var i=0; i< checkBoxes.length; i++){
+    checkBoxes[i].addEventListener('change', function(){
+        // get all checked boxes
+        var checked = document.querySelectorAll('input[type=radio]:checked');
+        // console.log("aaa ",checked[0], checked[0].value)
+        read_year1 = checked[0].value;
+        console.log("inside ", read_year1);
+        chart(read_year1);
+        return;
+
+
+
+    }
+
+        );
+    //     console.log("outside ", read_year1);
+    // chart();
+
+}
+
+
 
 // Days are fixed. Why shouldn't we hard code it?
 let days = [['S', 1 ], ['M', 2], ['T', 3], ['W', 4], ['T', 5], ['F', 6], ['S', 7]];
@@ -84,7 +110,7 @@ for (let day in days){
 // Week header
 
 let week = Array(53).fill().map((element, index) => index + 1);
-console.log(week[0])
+// console.log(week[0])
 
 function week_header(week_num){
     svg_right.append('text')
@@ -101,7 +127,9 @@ for (let week_num in week){
 }
 
 
-d3.csv('./data/n50_2020_2023_with_day_week_year.csv').then((data) => {
+function chart(arg_read_year=2023){
+
+    d3.csv('./data/n50_2020_2023_with_day_week_year.csv').then((data) => {
 
     // const lines = graph.selectAll("line").data(data);
 
@@ -112,8 +140,8 @@ d3.csv('./data/n50_2020_2023_with_day_week_year.csv').then((data) => {
         let week = data[row]['week'];
         let year = data[row]['year'];
 
-        if (year == read_year){
-            console.log(day_as_number(day)[0])
+        if (year == arg_read_year){
+            // console.log(day_as_number(day)[0])
             svg_right.append('rect')
                 .attr('x', 35 + ( day_as_number(day)[0] * 50) )
                 .attr('y', 35 + (week * 25))
@@ -123,7 +151,11 @@ d3.csv('./data/n50_2020_2023_with_day_week_year.csv').then((data) => {
                 .attr('stroke-fill','grey')
 
 
+            }
         }
-    }
 
-})
+    })
+
+}
+
+
