@@ -62,28 +62,50 @@ function day_as_number(day){
 let read_year = 2020;
 let read_year1 = 2023;
 // get all checkboxes
-var checkBoxes = document.querySelectorAll('input[type=radio]');
-console.log(checkBoxes)
-// add event listener to each checkbox
-for (var i=0; i< checkBoxes.length; i++){
-    checkBoxes[i].addEventListener('change', function(){
-        // get all checked boxes
-        var checked = document.querySelectorAll('input[type=radio]:checked');
-        // console.log("aaa ",checked[0], checked[0].value)
-        read_year1 = checked[0].value;
-        console.log("inside ", read_year1);
-        chart(read_year1);
-        return;
+var radios = document.querySelectorAll('input[type=radio]');
+console.log(radios)
+// add event listener to each radiobutton
 
+    // for (var i=0; i< radios.length; i++){
+    //     radios[i].addEventListener('change', function(){
+    //         var selected = document.querySelector('input[type=radio]:checked');
+    //         // display message
+    //         console.log(selected.value)
+    //         chart(arg_read_year=selected.value);
+    //     })
+    // }
+radio_0 = radios[0].addEventListener('change', function(){
+    // reset_chart();
+    var selected = document.querySelector('input[type=radio]:checked');
+    console.log("val  ",selected.value);
+    chart(arg_read_year=selected.value);
+    })
 
+radio_1 = radios[1].addEventListener('change', function(){
+    // reset_chart();
+    var selected = document.querySelector('input[type=radio]:checked');
+    console.log("val1  ",selected.value);
+    chart(arg_read_year=selected.value);
+    })
 
-    }
+radio_2 = radios[2].addEventListener('change', function(){
+    // reset_chart();
+    var selected = document.querySelector('input[type=radio]:checked');
+    console.log("val2  ",selected.value);
+    chart(arg_read_year=selected.value);
 
-        );
-    //     console.log("outside ", read_year1);
-    // chart();
+    })
 
-}
+radio_3 = radios[3].addEventListener('change', function(){
+    // reset_chart();
+    var selected = document.querySelector('input[type=radio]:checked');
+    console.log("val3  ",selected.value);
+    chart(arg_read_year=selected.value);
+
+    })
+
+// console.log(radio_0)
+
 
 
 
@@ -127,7 +149,24 @@ for (let week_num in week){
 }
 
 
-function chart(arg_read_year=2023){
+function reset_chart(){
+    // var svg = d3.select("graph");
+    // svg.selectAll("*").remove();
+    d3.selectAll("svg > *").remove();
+}
+
+function chart(arg_read_year){
+    reset_chart();
+
+    for (let week_num in week){
+        week_header(week[week_num]);
+    }
+
+    for (let day in days){
+    // console.log(day, days[day], days[day][0], days[day][1])
+
+        day_header(days[day][0], days[day][1]);
+    }
 
     d3.csv('./data/n50_2020_2023_with_day_week_year.csv').then((data) => {
 
