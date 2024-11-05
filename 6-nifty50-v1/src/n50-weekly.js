@@ -55,57 +55,31 @@ function day_as_number(day){
 
 }
 
-// var checkedValue = document.querySelector('.radioButton:checked').value;
 
-// console.log(checkedValue);
-
-let read_year = 2020;
-let read_year1 = 2023;
 // get all checkboxes
 var radios = document.querySelectorAll('input[type=radio]');
-console.log(radios)
-// add event listener to each radiobutton
 
-    // for (var i=0; i< radios.length; i++){
-    //     radios[i].addEventListener('change', function(){
-    //         var selected = document.querySelector('input[type=radio]:checked');
-    //         // display message
-    //         console.log(selected.value)
-    //         chart(arg_read_year=selected.value);
-    //     })
-    // }
 radio_0 = radios[0].addEventListener('change', function(){
-    // reset_chart();
     var selected = document.querySelector('input[type=radio]:checked');
-    console.log("val  ",selected.value);
     chart(arg_read_year=selected.value);
     })
 
 radio_1 = radios[1].addEventListener('change', function(){
-    // reset_chart();
     var selected = document.querySelector('input[type=radio]:checked');
-    console.log("val1  ",selected.value);
     chart(arg_read_year=selected.value);
     })
 
 radio_2 = radios[2].addEventListener('change', function(){
-    // reset_chart();
     var selected = document.querySelector('input[type=radio]:checked');
-    console.log("val2  ",selected.value);
     chart(arg_read_year=selected.value);
 
     })
 
 radio_3 = radios[3].addEventListener('change', function(){
-    // reset_chart();
     var selected = document.querySelector('input[type=radio]:checked');
-    console.log("val3  ",selected.value);
     chart(arg_read_year=selected.value);
 
     })
-
-// console.log(radio_0)
-
 
 
 
@@ -152,7 +126,8 @@ for (let week_num in week){
 function reset_chart(){
     // var svg = d3.select("graph");
     // svg.selectAll("*").remove();
-    d3.selectAll("svg > *").remove();
+    // d3.selectAll("svg > *").remove(); // This is working
+    svg_right.selectAll('.boxes').remove();
 }
 
 function chart(arg_read_year){
@@ -163,21 +138,21 @@ function chart(arg_read_year){
     }
 
     for (let day in days){
-    // console.log(day, days[day], days[day][0], days[day][1])
 
         day_header(days[day][0], days[day][1]);
     }
 
     d3.csv('./data/n50_2020_2023_with_day_week_year.csv').then((data) => {
 
-    // const lines = graph.selectAll("line").data(data);
-
 
     for (let row = 0; row < data.length; row++){
 
         let day = data[row]['day'];
+        let dt = data[row]['HistoricalDate']
         let week = data[row]['week'];
         let year = data[row]['year'];
+        let change = parseFloat( data[row]['daily_change_perc'] );
+
 
         if (year == arg_read_year){
             // console.log(day_as_number(day)[0])
@@ -188,8 +163,29 @@ function chart(arg_read_year){
                 .attr('width',40 )
                 .attr('fill', 'green')
                 .attr('stroke-fill','grey')
+                .style("fill", change  <= 0 ? 'red' : 'green')
+                .attr('stroke', '#704214')
+                .attr('stroke-width', 0.2)
+                .attr('opacity', 0.8)
+                .classed('boxes', true)
+                .on("mouseover", function (event, d) {
+                    d3.select(this).attr('stroke', 'black').attr('stroke-width', 3);
+                    tip.style("opacity", 1)
+                        .style("left", 1000 + 250 + "px")
+                        .style("top", event.pageY-20  + "px")
+                        .html(
 
+                                "<b>Date</b> &nbsp;&nbsp;&nbsp; : "  + dt +
+                                "<br><b>Change %</b> : "  + change.toFixed(3) + ' %'
 
+                            );
+
+        })
+        .on("mouseout", function(d){
+                d3.select(this).attr("stroke", "#704214").attr('stroke-width', 0.2);
+                tip.style("opacity", 0);
+
+                }   )
             }
         }
 

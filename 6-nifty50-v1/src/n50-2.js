@@ -98,7 +98,7 @@ d3.csv('./data/nifty_50_2022.csv').then((data) => {
     let change = parseFloat( data[row]['daily_change_perc'] );
 
    // Header - years
-        svg.append('text')
+    svg.append('text')
         .text(year)
         .attr('x', 5 + (year - 2019) * 55)
         .attr('y', 20)
