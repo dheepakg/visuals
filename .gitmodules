@@ -1,0 +1,6 @@
+[submodule "Desktop/WorkArea/GitHub/visuals/themes/beautifulhugo"]
+	path = Desktop/WorkArea/GitHub/visuals/themes/beautifulhugo
+	url = https://github.com/halogenica/beautifulhugo.git
+[submodule "Desktop/WorkArea/GitHub/visuals/themes/hugo-notice"]
+	path = Desktop/WorkArea/GitHub/visuals/themes/hugo-notice
+	url = https://github.com/martignoni/hugo-notice.git
