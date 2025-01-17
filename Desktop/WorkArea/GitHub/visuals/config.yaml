@@ -1,0 +1,54 @@
+baseurl: https://dheepakg.github.io/
+DefaultContentLanguage: en
+# added from main
+readmore: false # Show "Read more" button in list if true
+canonifyURLs: true
+enableEmoji: true
+publishDir: "docs"
+goatCounter: "dheepak"
+permalinks:
+  post: "/post/:year/:month/:title"
+enableGitInfo: true
+# added from main
+title: Dheepak's blog
+theme: ["hugo-notice", "beautifulhugo"]
+pygmentsStyle: trac
+pygmentsUseClasses: yes
+pygmentsCodeFences: yes
+pygmentsCodefencesGuessSyntax: yes
+taxonomies:
+  series: "series"
+  Categories: "Categories"
+  Tags: "Tags"
+  year: "year"
+Params:
+  comments: yes
+  commit: no
+  dateFormat: January 2, 2006
+  # delayDisqus: yes
+  comments.provider: "utterances"
+  favicon: "/favicon/favicon.ico"
+  # logo: img/avatar-icon.png
+  mainSections:
+    - post
+    - posts
+  readingTime: yes
+  rss: yes
+  showRelatedPosts: yes
+  socialShare: yes
+  subtitle: ""
+  useHLJS: yes
+  wordCount: yes
+Author:
+  codepen: dheepak_g
+  github: dheepakg
+  name: Dheepak
+  telegram: dheeepak
+  twitter: dheeepakg
+
+  website: /
+
+module:
+  imports:
+    - path: github.com/martignoni/hugo-notice
+    - path: beautifulhugo
